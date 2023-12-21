@@ -1,4 +1,4 @@
-import random
+import random, time
 
 enemy_hp = 100
 player_hp = 120
@@ -6,13 +6,13 @@ player_hp = 120
 pickaxe = 25
 yxa = 30
 magisktlubba = 35
-arsenal = ["pickaxe 🪓", "yxa 🔨", "magisktlubba 🍭✨"]
+arsenal = ["Pickaxe 🪓", "Yxa 🔨", "Magisktlubba 🍭✨"]
 
 
 def spelare_attack():
-    """Spelaren attackerar enemy genom att välja vapen"""
-    global enemy_hp
-    attack = int(input("Skriv 1 för pickaxe, 2 för yxan och 3 för den magiska klubban:\n"))
+    """Spelaren attackerar enemy genom att välja vapen i sin arsenal"""
+    global enemy_hp    
+    attack = int(input("Skriv 1 för Pickaxe, 2 för xan och 3 för den magiska klubban:\n"))
 
     if attack == 1:
         enemy_hp -= pickaxe
@@ -46,17 +46,24 @@ def enemy_attack():
     else:
         print(f"💥💥💥: Du har nu {player_hp} hp efter enemy attack.")
 
-print (f"""Du har dessa vapen i din arsenal: {arsenal}. Din pickaxe gör 25 damage, yxan gör 30 och den magiska klubban gör 35!
-Vilket vapen vill du attackera skeletten med?""")
+print (f"Du har dessa vapen i din arsenal: {arsenal}.")
+time.sleep(2)
+
+print(f"Din pickaxe gör 25 damage, yxan gör 30 och den magiska klubban gör 35!")
+time.sleep(2)
+
+print(f"Vilket vapen vill du attackera skeletten med?")
+time.sleep(2)
+
 while player_hp > 0 or enemy_hp > 0:
     spelare_attack()
+    time.sleep(0.5)
     if enemy_hp <= 0:
         print("Enemy är död")
         break
 
     enemy_attack()
+    time.sleep(0.5)
     if player_hp <= 0:
         print("GAME OVER")
         break
-
-
