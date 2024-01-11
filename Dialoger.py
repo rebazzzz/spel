@@ -22,8 +22,6 @@ _\ \ || (_) | | | |  __/  / /_//  __/ |_) | |_| | | \__
                                     |_|                  
         """)
 
-# Gamla Gubben
-
 # Boss
 
 print ("plin plin plon")
