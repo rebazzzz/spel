@@ -10,34 +10,17 @@ def pop_up_text(text, delay=1):
 
 
 # Title 
-
-print (""" 
- __ _                        ___           _   _         
-/ _\ |_ ___  _ __   ___     /   \___ _ __ | |_| |__  ___ 
-\ \| __/ _ \| '_ \ / _ \   / /\ / _ \ '_ \| __| '_ \/ __|
-_\ \ || (_) | | | |  __/  / /_//  __/ |_) | |_| | | \__ 
-\__/\__\___/|_| |_|\___| /___,' \___| .__/ \__|_| |_|___/
+def title():
+  print (""" 
+  __ _                        ___           _   _         
+ / _\ |_ ___  _ __   ___     /   \___ _ __ | |_| |__  ___ 
+ \ \| __/ _ \| '_ \ / _ \   / /\ / _ \ '_ \| __| '_ \/ __|
+ _\ \ || (_) | | | |  __/  / /_//  __/ |_) | |_| | | \__ 
+ \__/\__\___/|_| |_|\___| /___,' \___| .__/ \__|_| |_|___/
                                     |_|                  
         """)
 
-# Boss
-
-print ("plin plin plon")
-
-# Boss tar damage
-print ("Crash!")
-
-# Enemys
-
-print ("raslande ben hörs kommande")
-
-#Enemy dör
-print ("plink plonk hör när skeletet faller ihop")
-
-
 #Miljö beskrivning, Här börjar alla dialoger och text för varje rum.
-
-
 
 #Room1
 
@@ -54,6 +37,7 @@ def room1():
   print ("du går igenom tunneln och kommer till ett nytt rum")
   time.sleep(2)
 
+room1()
 #om man har nyckeln 
 print ("låsta dörren öppnades och du går igenom")
 
@@ -68,6 +52,7 @@ def room2():
   print ("Du går igenom tunneln åt höger")
   time.sleep(2)
 
+room2()
 #Deadend1
 def deadend1():
   print ("du kommer fram till ett room med inga mer väggar men en kista är framför dig")
@@ -81,6 +66,7 @@ def deadend1():
   if val == 2:
      print ("Du lämnade rummet och kom tillbaka till rummet du va innan i")
 
+deadend1()
 #Enemy room 1 
 def enemyroom1():
  print ("Rummet är kallt och du har raslande ljud åt andra sidan grått rummet")
@@ -134,6 +120,7 @@ def enemyroom1():
  print ("Du har nu nyckel i din inventory.")
  time.sleep(2)
 
+enemyroom1()
 #Enemy room 2
 def enemyroom2():
  print ("rummet känns kallare än för ut och ljud av fallande stenar hörs")
@@ -176,6 +163,7 @@ def enemyroom2():
  print ("Framför dig finns två dörrar en åt höger och en åt vänster")
  time.sleep(2)
 
+enemyroom2()
 #höger dörren
 def högerdörr():
  print("Dörren är olåst och du går igenom den")
@@ -220,6 +208,7 @@ def gåttan():
  print("du fick en nyckle till rummet")
  time.sleep(2)
 
+gåttan()
 #Tomt rum
 def tomrum():
  print("Du kliver in i the mörka rummet och tänder ett ljus")
@@ -276,6 +265,7 @@ def oldman():
  print ("Den åt vänster är dödlig … så lycka till nu med att ta ner stenjätten.")
  time.sleep(2)
 
+oldman()
 #Boss rummet.
 def boss():
  print("du går igenom högra dörren och bemöts av en intense känsla")
@@ -317,6 +307,7 @@ def boss():
  (_ \|`   _,/_  /  \_            ,--`
   \( `   <.,../`     `-.._   _,-`""")
 
+boss()
 #här i mellan så slås man mått jätten
 def bossdead():
  print("stenar faller från stenjätten och dör")
@@ -328,6 +319,7 @@ def bossdead():
  print("bakom jättens kropp ser du två dörrar en åt höger och en åt vänster")
  time.sleep(2)
 
+bossdead()
 #vänster dörren
 def sistavänster():
  print("du öppnar dörren och kliver in")
