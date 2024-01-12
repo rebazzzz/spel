@@ -31,9 +31,11 @@ def room1():
   print ("Vid gråttans slut finns de två vägare en öppen gråt tunnel åt höger och en dörr åt vänser ")
   time.sleep(2)
 
+def caveleft ():
   print ("Du går mot dörren och försöker öppna den men den är låst och du går tillbaka till var du börja")
   time.sleep(2)
 
+def caveright():
   print ("du går igenom tunneln och kommer till ett nytt rum")
   time.sleep(2)
 
@@ -44,12 +46,14 @@ def havekey():
 
 #Room2
 def room2():
-  print ("Två öppna väggar är framför dig")
+  print ("Två öppna väggar är framför dig en åt höger och en åt vänster")
   time.sleep(2)
 
+def straightdoor():
   print ("Du går igenom tunneln rakt fram")
   time.sleep(2)
 
+def rightdoor1():
   print ("Du går igenom tunneln åt höger")
   time.sleep(2)
 
@@ -114,6 +118,7 @@ def enemyroom1():
 
  print ("ett skelet kom fram!")
 
+def DeadEnemy1():
  print ("raslande benen faller och en nyckel ligger på marken")
  time.sleep(2)
 
@@ -156,7 +161,7 @@ def enemyroom2():
 
  print("Ett skelet kom fram!!!")
 
-
+def DeadEnemy2():
  print("Skeletet har dött och du går till slutet av gråt rummet")
  time.sleep(2)
 
@@ -164,11 +169,11 @@ def enemyroom2():
  time.sleep(2)
 
 #höger dörren
-def högerdörr():
+def rightdoor2():
  print("Dörren är olåst och du går igenom den")
 
 #vänster dörren
-def vänsterdörr():
+def leftdoor():
  print("Dörren är låst...")
 
 #om man har nyckeln
@@ -208,7 +213,7 @@ def riddle():
  time.sleep(2)
 
 #Tomt rum
-def tomrum():
+def emptyroom():
  print("Du kliver in i the mörka rummet och tänder ett ljus")
  time.sleep(2)
 
@@ -319,7 +324,7 @@ def bossdead():
 
 
 #vänster dörren
-def sistavänster():
+def lastleft():
  print("du öppnar dörren och kliver in")
  time.sleep(2)
 
@@ -330,7 +335,7 @@ def sistavänster():
  time.sleep(2)
 
 #höger dörren
-def sistahöger():
+def lastright():
  print("du öppnar dörren och kliver in")
  time.sleep(2)
 
