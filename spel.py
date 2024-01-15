@@ -1,18 +1,19 @@
+#import
 import random, time
 
+#variabel
 enemy_hp = 100
 player_hp = 120
-
 pickaxe = 25
 yxa = 30
 magisktlubba = 35
 arsenal = ["Pickaxe 🪓", "Yxa 🔨", "Magisktlubba 🍭✨"]
 
-
+#funktion för spelare attack mot enemy
 def spelare_attack():
     """Spelaren attackerar enemy genom att välja vapen i sin arsenal"""
     global enemy_hp    
-    attack = int(input("Skriv 1 för Pickaxe, 2 för xan och 3 för den magiska klubban:\n"))
+    attack = int(input("Skriv 1 för Pickaxe, 2 för yxan och 3 för den magiska klubban:\n"))
 
     if attack == 1:
         enemy_hp -= pickaxe
@@ -36,6 +37,7 @@ def spelare_attack():
     else:
         print("Använd rätt vapen!")
 
+#funktion för enemy attack mot spelaren
 def enemy_attack():
     """Enemy attackerar spelaren med random damage"""
     global player_hp
@@ -46,6 +48,7 @@ def enemy_attack():
     else:
         print(f"💥💥💥: Du har nu {player_hp} hp efter enemy attack.")
 
+#spelguide innan man börjar spela
 print (f"Du har dessa vapen i din arsenal: {arsenal}.")
 time.sleep(2)
 
@@ -55,6 +58,7 @@ time.sleep(2)
 print(f"Vilket vapen vill du attackera skeletten med?")
 time.sleep(2)
 
+#loop för combat mellan spelaren och enemy tils en dör
 while player_hp > 0 or enemy_hp > 0:
     spelare_attack()
     time.sleep(0.5)
