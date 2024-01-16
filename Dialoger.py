@@ -66,7 +66,7 @@ def deadend1():
   val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte)"))
 
   if val == 1:
-     print ("Du öppna kistan och hittade en flaska av liv som ger 50 hp")
+     print ("Du öppna kistan och hittade inget där de bara stenar och kol inuti")
 
   if val == 2:
      print ("Du lämnade rummet och kom tillbaka till rummet du va innan i")
