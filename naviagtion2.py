@@ -208,7 +208,20 @@ def position():
 
     elif place == 1 and horizont == "right" and key1 == True:
         print("du har nyckeln, gå tillbaks till start")
-        movement()
+        general_option = None
+        while general_option not in ["0", "1", "3"]:
+
+            general_option = input("1 för vänster - 0 för höger  - 3 för backåt")
+
+            if general_option == "0":
+                place = place + 1
+            elif general_option == "1":
+                place = place + 2
+            elif general_option == "3":
+                place = place - 1
+                horizont = None
+            else:
+                print("du kan bara skriva 0 - 1 - 3")
 
     elif place == 2 and horizont == "right" and key1 == True:
         print("Det finns inget mer här")
@@ -229,6 +242,7 @@ def position():
 
     elif place == 0 and horizont == None and key1 == True:
         print("du kan öppna vänsta dörren nu")
+        option = None
         while option not in ["0", "1"]:
             option = input("1 för vänster - 0 för höger")
 
@@ -241,24 +255,42 @@ def position():
 
     elif place == 1 and horizont == "left" and key2 == False:
         key_option = None
-        while key_option not in ["0", "1"]:
+        while key_option not in ["0", "1", "3"]:
         
-            key_option = input("1 för vänster (låst) - 0 för höger")
+            key_option = input("1 för vänster (låst) - 0 för höger - 3 för att gå backåt")
 
             if key_option == "0":
                 place = place + 1
             elif key_option == "1":
                 print("dörren är låst, hitta den nya nyckeln")
+            elif key_option == "3":
+                place = place - 1
             else: 
                 print("du kan bara skriva 1 eller 0")
+
     elif place == 2 and horizont == "left" and key2 == False:
         deadend()
+
     elif place == 2 and horizont == "left" and key2 == True:
         print("Det finns inget mer här")
         deadend()
+
     elif place == 1 and horizont == "left" and key2 == True:
         print("du kan öppna den vänstra dörren nu")
-        movement()
+        key_option = None
+        while key_option not in ["0", "1", "3"]:
+        
+            key_option = input("1 för vänster (låst) - 0 för höger - 3 för att gå backåt")
+
+            if key_option == "0":
+                place = place + 1
+            elif key_option == "1":
+                place = place + 2
+            elif key_option == "3":
+                place = place - 1
+            else: 
+                print("du kan bara skriva 1 eller 0")
+
     elif place == 3 and horizont == "left":
         movement()
     elif place == 4:
@@ -274,7 +306,3 @@ while win != True or death != True:
     position()
     event()
     print(place)
-    if key1 == True:
-        print(key1)
-
-
