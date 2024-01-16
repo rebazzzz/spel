@@ -1,9 +1,9 @@
 import time
 
-(text, delay=1):
+text, delay=1
 words = text.split()
 for word in words:
-print(word, end=' ', flush=True)
+  print(word, end=' ', flush=True)
 time.sleep(delay)
 
 

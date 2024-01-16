@@ -1,2 +1,2 @@
 import spel, Dialoger
-
+Dialoger.
