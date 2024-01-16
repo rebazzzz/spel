@@ -1,0 +1,2 @@
+import spel, Dialoger
+

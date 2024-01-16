@@ -49,25 +49,26 @@ def enemy_attack():
         print(f"💥💥💥: Du har nu {player_hp} hp efter enemy attack.")
 
 #spelguide innan man börjar spela
-print (f"Du har dessa vapen i din arsenal: {arsenal}.")
-time.sleep(2)
-
-print(f"Din pickaxe gör 25 damage, yxan gör 30 och den magiska klubban gör 35!")
-time.sleep(2)
-
-print(f"Vilket vapen vill du attackera skeletten med?")
-time.sleep(2)
+def combatguide():
+    print (f"Du har dessa vapen i din arsenal: {arsenal}.")
+    time.sleep(2)
+    print(f"Din pickaxe gör 25 damage, yxan gör 30 och den magiska klubban gör 35!")
+    time.sleep(2)
+    print(f"Vilket vapen vill du attackera skeletten med?")
+    time.sleep(2)
 
 #loop för combat mellan spelaren och enemy tils en dör
-while player_hp > 0 or enemy_hp > 0:
-    spelare_attack()
-    time.sleep(0.5)
-    if enemy_hp <= 0:
-        print("Enemy är död")
-        break
+def combatloop():
+    """Loop för combat mellan spelaren och enemy"""
+    while player_hp > 0 or enemy_hp > 0:
+        spelare_attack()
+        time.sleep(0.5)
+        if enemy_hp <= 0:
+            print("Enemy är död")
+            break
 
-    enemy_attack()
-    time.sleep(0.5)
-    if player_hp <= 0:
-        print("GAME OVER")
-        break
+        enemy_attack()
+        time.sleep(0.5)
+        if player_hp <= 0:
+            print("GAME OVER")
+            break
