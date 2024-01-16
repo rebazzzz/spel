@@ -1,11 +1,10 @@
 import time
 
-
-def pop_up_text(text, delay=1):
-    words = text.split()
-    for word in words:
-        print(word, end=' ', flush=True)
-        time.sleep(delay)
+(text, delay=1):
+words = text.split()
+for word in words:
+print(word, end=' ', flush=True)
+time.sleep(delay)
 
 
 
