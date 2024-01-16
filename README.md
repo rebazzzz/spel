@@ -1,2 +1,3 @@
 # Turned based combat game
-Jag och Malik jobbar på combat funktionen just nu. Koden körs varanaan gång tills antingen spelaren eller enemy dör. 
+Alla i gruppen har var sin del att göra
+__Allt finns på Trello__
