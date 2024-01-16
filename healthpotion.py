@@ -1,3 +1,5 @@
+#Detta ska inte användas!!!
+
 player_hp = 120
 
 hp_potion = 40
