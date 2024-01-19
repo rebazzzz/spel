@@ -207,7 +207,7 @@ def position():
                 print("du kan bara skriva 0")
 
     elif place == 1 and horizont == "right" and key1 == True:
-        print("du har nyckeln, gå tillbaks till start")
+        print("du har nyckeln, gå tillbaks och öppna dörren")
         general_option = None
         while general_option not in ["0", "1", "3"]:
 
@@ -280,7 +280,7 @@ def position():
         key_option = None
         while key_option not in ["0", "1", "3"]:
         
-            key_option = input("1 för vänster (låst) - 0 för höger - 3 för att gå backåt")
+            key_option = input("1 för vänster - 0 för höger - 3 för att gå backåt")
 
             if key_option == "0":
                 place = place + 1
@@ -292,17 +292,47 @@ def position():
                 print("du kan bara skriva 1 eller 0")
 
     elif place == 3 and horizont == "left":
-        movement()
+        key2_option = None
+        while key2_option not in ["0", "1", "3"]:
+        
+            key2_option = input("1 för vänster - 0 för höger - 3 för att gå backåt")
+
+            if key2_option == "0":
+                place = place + 2
+            elif key2_option == "1":
+                place = place + 1
+            elif key2_option == "3":
+                place = place - 1
+            else: 
+                print("du kan bara skriva 1 eller 0")
+
     elif place == 4:
         deadend()
+
     elif place == 5:
-        movement()
+        end_option = None
+        while end_option not in ["0", "1", "3"]:
+        
+            end_option = input("1 för vänster - 0 för höger - 3 för att gå backåt")
+
+            if end_option == "0":
+                place = place + 1
+            elif end_option == "1":
+                place = place + 2
+            elif end_option == "3":
+                place = place - 1
+            else: 
+                print("du kan bara skriva 1 eller 0")
     elif place == 6:
-        print
+        print("du dog")
+
     elif place == 7:
-        print
+        print("du van")
 
 while win != True or death != True:
     position()
     event()
     print(place)
+    print(horizont)
+
+print("end")
