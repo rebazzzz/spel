@@ -8,7 +8,7 @@ def pop_up_text(text, delay=1):
         time.sleep(delay)
 
 
-
+# Jag har fått Asciiart från Asciiart.eu, Dessutom så fick jag time sleep samt delay text från en yt video.
 
 # Title 
 def title():
