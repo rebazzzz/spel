@@ -201,7 +201,7 @@ def riddle():
  print("besvara min gåtta rätt och jag ger dig nyckeln till de låsta dörren")
  time.sleep(2)
 
- dragonquest = input(". . . jag lysser upp natten och styr havets vågor men lysser inte lika starkt som solen vad är jag ?")
+ dragonquest = input(". . . jag lysser upp natten och styr havets vågor men lysser inte lika starkt som min bror ?")
  while True:
    if dragonquest == "måne" or "månen":
      print("De rätt")
