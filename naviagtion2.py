@@ -8,8 +8,6 @@ wiseman_room = False
 enemy1_room = False
 enemy2_room = False
 riddle_room = False
-# boss_room = False
-# death_room = False
 
 death = False
 win = False
@@ -345,8 +343,5 @@ while win != True and death != True:
     position()
     event()
     print(place)
-    print(horizont)
-    print(win)
-    print(death)
 
 print("end")
