@@ -134,13 +134,13 @@ def deadend():
     global death
     global win
     deadend_option = None
-    while deadend_option != "0":
-        deadend_option = input("du kan bara gå backåt - 0 för backåt")
+    while deadend_option != "3":
+        deadend_option = input("du kan bara gå backåt - 3 för backåt")
     
-        if deadend_option == "0":
+        if deadend_option == "3":
            place = place - 1
         else:
-            print("du kan bara skriva 0")
+            print("du kan bara skriva 3")
 
 def position():
     global place
