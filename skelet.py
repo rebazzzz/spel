@@ -20,19 +20,19 @@ def spelare_attack():
         if enemy_hp < 0:
             print(f"Skelettet är död!")
         else:
-            print(f"⚔️ 🦴💥: Skelettet har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴 💥: Skelettet har nu {enemy_hp} hp efter din attack.")
     elif attack == 2:
         enemy_hp -= yxa
         if enemy_hp < 0:
             print(f"Skelettet är död:")
         else:
-            print(f"⚔️ 🦴💥💥: Skelettet har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴 💥💥: Skelettet har nu {enemy_hp} hp efter din attack.")
     elif attack == 3:
         enemy_hp -= magisktlubba
         if enemy_hp < 0:
             print(f"Skelettet är död!")
         else:
-            print(f"⚔️ 🦴💥💥💥: Skelettet har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴 💥💥💥: Skelettet har nu {enemy_hp} hp efter din attack.")
             #⚔️🦴💥
     else:
         print("Använd rätt vapen!")

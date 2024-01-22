@@ -1,6 +1,6 @@
-import combat, dialoger
-dialoger.title()
-dialoger.room1()
+import combat, Dialoger
+Dialoger.title()
+Dialoger.enemyroom1()
 combat.combatguide()
 combat.combatloop()
 

@@ -20,19 +20,19 @@ def spelare_attack():
         if enemy_hp < 0:
             print(f" Lava skelettet är död!")
         else:
-            print(f"⚔️ 🦴💥: Lava skelettet har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴🔥 💥: Lava skelettet har nu {enemy_hp} hp efter din attack.")
     elif attack == 2:
         enemy_hp -= yxa
         if enemy_hp < 0:
             print(f"Lava skelettet är död:")
         else:
-            print(f"⚔️ 🦴💥💥: Lava skelettet har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴🔥 💥💥: Lava skelettet har nu {enemy_hp} hp efter din attack.")
     elif attack == 3:
         enemy_hp -= magisktlubba
         if enemy_hp < 0:
             print(f"Lava skelettet är död!")
         else:
-            print(f"⚔️ 🦴💥💥💥: Lava skelettet har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴🔥 💥💥💥: Lava skelettet har nu {enemy_hp} hp efter din attack.")
             #⚔️🦴💥
     else:
         print("Använd rätt vapen!")
@@ -41,12 +41,12 @@ def spelare_attack():
 def lavaskelet_attack():
     """Enemy attackerar spelaren med random damage"""
     global player_hp
-    damage = random.randint(20, 30)
+    damage = random.randint(25, 30)
     player_hp -= damage
     if player_hp < 0:
         print(f"Du har nu 0 hp efter Lava skelettets attack.")
     else:
-        print(f"⚔️ 💥💥💥: Du har nu {player_hp} hp efter Lava skelettets attack.")
+        print(f" 🔥🔥🔥🔥: Du har nu {player_hp} hp efter Lava skelettets attack.")
 
 #spelguide innan man börjar spela
 def combatguide():
