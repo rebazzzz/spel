@@ -1,5 +1,5 @@
-import spel, Dialoger
-Dialoger.title()
-Dialoger.enemyroom1()
-spel.combatguide()
-spel.combatloop()
+import combat, dialoger
+dialoger.title()
+dialoger.enemyroom1()
+combat.combatguide()
+combat.combatloop() 

@@ -18,21 +18,21 @@ def spelare_attack():
     if attack == 1:
         enemy_hp -= pickaxe
         if enemy_hp < 0:
-            print(f"Enemy har nu 0 hp efter din attack.")
+            print(f"Enemy är död!")
         else:
-            print(f"🦴💥: Enemy har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴💥: Enemy har nu {enemy_hp} hp efter din attack.")
     elif attack == 2:
         enemy_hp -= yxa
         if enemy_hp < 0:
-            print(f"Enemy har nu 0 hp efter din attack.")
+            print(f"Enemy är död!")
         else:
-            print(f"🦴💥💥: Enemy har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴💥💥: Enemy har nu {enemy_hp} hp efter din attack.")
     elif attack == 3:
         enemy_hp -= magisktlubba
         if enemy_hp < 0:
-            print(f"Enemy har nu 0 hp efter din attack.")
+            print(f"Enemy är död!")
         else:
-            print(f"🦴💥💥💥: Enemy har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴💥💥💥: Enemy har nu {enemy_hp} hp efter din attack.")
             #⚔️🦴💥
     else:
         print("Använd rätt vapen!")
@@ -46,7 +46,7 @@ def enemy_attack():
     if player_hp < 0:
         print(f"Du har nu 0 hp efter enemy attack.")
     else:
-        print(f"💥💥💥: Du har nu {player_hp} hp efter enemy attack.")
+        print(f"⚔️ 💥💥💥: Du har nu {player_hp} hp efter enemy attack.")
 
 #spelguide innan man börjar spela
 def combatguide():
@@ -64,7 +64,7 @@ def combatloop():
         spelare_attack()
         time.sleep(0.5)
         if enemy_hp <= 0:
-            print("Enemy är död")
+            print("Raslande benen faller och en nyckel ligger på marken.")
             break
 
         enemy_attack()
