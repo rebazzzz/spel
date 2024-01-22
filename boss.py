@@ -20,19 +20,19 @@ def spelare_attack():
         if boss_hp < 0:
             print(f"Bossen är död!")
         else:
-            print(f"⚔️ 🦴💥: Skelettet har nu {boss_hp} hp efter din attack.")
+            print(f"⚔️ 🗿 💥: Bossen har nu {boss_hp} hp efter din attack.")
     elif attack == 2:
         boss_hp -= yxa
         if boss_hp < 0:
             print(f"Bossen är död:")
         else:
-            print(f"⚔️ 🦴💥💥: Skelettet har nu {boss_hp} hp efter din attack.")
+            print(f"⚔️ 🗿 💥💥: Bossen har nu {boss_hp} hp efter din attack.")
     elif attack == 3:
         boss_hp -= magisktlubba
         if boss_hp < 0:
             print(f"Bossen är död!")
         else:
-            print(f"⚔️ 🦴💥💥💥: Bossen har nu {boss_hp} hp efter din attack.")
+            print(f"⚔️ 🗿 💥💥💥: Bossen har nu {boss_hp} hp efter din attack.")
             #⚔️🦴💥
     else:
         print("Använd rätt vapen!")
@@ -46,7 +46,7 @@ def boss_attack():
     if player_hp < 0:
         print(f"Du har nu 0 hp efter Bossens attack.")
     else:
-        print(f"⚔️ 💥💥💥: Du har nu {player_hp} hp efter Bossens attack.")
+        print(f"⚔️ 🗿💥💥💥: Du har nu {player_hp} hp efter Bossens attack.")
 
 #spelguide innan man börjar spela
 def combatguide():
