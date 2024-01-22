@@ -314,9 +314,6 @@ def boss():
 
 #här i mellan så slås man mått jätten
 def bossdead():
- print("stenar faller från stenjätten och dör")
- time.sleep(2)
-
  print("du plockar upp kärnan som du letade efter. ")
  time.sleep(2)
 
