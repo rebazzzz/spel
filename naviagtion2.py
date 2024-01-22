@@ -25,6 +25,8 @@ def event():
     global enemy1_room
     global enemy2_room
     global riddle_room
+    global death
+    global win
     if place == 2 and horizont == "right" and item_room == False:
         
         item_room = True
@@ -81,6 +83,8 @@ def movement():
     global enemy1_room
     global enemy2_room
     global riddle_room
+    global death
+    global win
     general_option = None
     while general_option not in ["0", "1", "3"]:
 
@@ -106,6 +110,8 @@ def start_movement():
     global enemy1_room
     global enemy2_room
     global riddle_room
+    global death
+    global win
     start_option = input("1 för vänster - 0 för höger")
 
     if start_option == "0":
@@ -127,6 +133,8 @@ def deadend():
     global enemy1_room
     global enemy2_room
     global riddle_room
+    global death
+    global win
     deadend_option = None
     while deadend_option != "0":
         deadend_option = input("du kan bara gå backåt - 0 för backåt")
@@ -147,6 +155,8 @@ def position():
     global enemy1_room
     global enemy2_room
     global riddle_room
+    global death
+    global win
     if place == 0 and horizont == None and key1 == False:
         
         start_option = None
@@ -265,6 +275,7 @@ def position():
                 print("dörren är låst, hitta den nya nyckeln")
             elif key_option == "3":
                 place = place - 1
+                horizont = None
             else: 
                 print("du kan bara skriva 1 eller 0")
 
@@ -288,6 +299,7 @@ def position():
                 place = place + 2
             elif key_option == "3":
                 place = place - 1
+                horizont = None
             else: 
                 print("du kan bara skriva 1 eller 0")
 
@@ -302,7 +314,7 @@ def position():
             elif key2_option == "1":
                 place = place + 1
             elif key2_option == "3":
-                place = place - 1
+                place = place - 2
             else: 
                 print("du kan bara skriva 1 eller 0")
 
@@ -320,7 +332,7 @@ def position():
             elif end_option == "1":
                 place = place + 2
             elif end_option == "3":
-                place = place - 1
+                place = place - 2
             else: 
                 print("du kan bara skriva 1 eller 0")
     elif place == 6:
@@ -329,10 +341,12 @@ def position():
     elif place == 7:
         print("du van")
 
-while win != True or death != True:
+while win != True and death != True:
     position()
     event()
     print(place)
     print(horizont)
+    print(win)
+    print(death)
 
 print("end")
