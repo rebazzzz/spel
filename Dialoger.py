@@ -29,7 +29,7 @@ def room1():
   print ("Du stiger in grottan och känner av de kalla luften forsa över")
   time.sleep(2)
 
-  print ("Vid gråttans slut finns de två vägare en öppen gråt tunnel åt höger och en dörr åt vänser ")
+  print ("Vid gråttans slut finns de två vägar en öppen gråt tunnel åt höger och en dörr åt vänser ")
   time.sleep(2)
 
 def caveleft ():
@@ -37,7 +37,7 @@ def caveleft ():
   time.sleep(2)
 
 def caveright():
-  print ("du går igenom tunneln och kommer till ett nytt rum")
+  print ("Du går igenom tunneln och kommer till ett nytt rum")
   time.sleep(2)
 
 
@@ -47,7 +47,7 @@ def havekey():
 
 #Room2
 def room2():
-  print ("Två öppna väggar är framför dig en åt höger och en åt vänster")
+  print ("Två öppna vägar är framför dig en åt höger och en åt vänster")
   time.sleep(2)
 
 def straightdoor():
@@ -61,7 +61,7 @@ def rightdoor1():
 
 #Deadend1
 def deadend1():
-  print ("du kommer fram till ett room med inga mer väggar men en kista är framför dig")
+  print ("Du kommer fram till ett room med inga mer väggar men en kista är framför dig")
   time.sleep(2)
 
   val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte)"))
@@ -74,7 +74,7 @@ def deadend1():
 
 #Enemy room 1 
 def enemyroom1():
- print ("Rummet är kallt och du har raslande ljud åt andra sidan grått rummet")
+ print ("Rummet är kallt och du hör raslande ljud åt andra sidan grått rummet")
  time.sleep(2)
 
  print("""
@@ -88,39 +88,39 @@ def enemyroom1():
    \/    | |                   l`^^'^^'j
          | |                _   \_____/     _
          j |               l `--__)-'(__.--' |
-        | |               | /`---``-----'"1 |  ,-----.
-        | |               )/  `--' '---'   \'-'  ___  `-.
-        | |              //  `-'  '`----'  /  ,-'   I`.  1
-      _ L |_            //  `-.-.'`-----' /  /  |   |  `. 1
-     '._' / \         _/(   `/   )- ---' ;  /__.J   L.__.\ :
+         | |               | /`---``-----'"1 |  ,-----.
+         | |               )/  `--' '---'   \'-'  ___  `-.
+         | |              //  `-'  '`----'  /  ,-'   I`.  1
+       _ L |_            //  `-.-.'`-----' /  /  |   |  `. 1
+      '._' / \         _/(   `/   )- ---' ;  /__.J   L.__.\ :
       `._;/7(-.......'  /        ) (     |  |            | |
-      `._;l _'--------_/        )-'/     :  |___.    _._./ ;
-        | |                 .__ )-'\  __  \  \  I   1   / /
-        `-'                /   `-\-(-'   \ \  `.|   | ,' /
-                           \__  `-'    __/  `-. `---'',-'
-                              )-._.-- (        `-----'
-                             )(  l\ o ('..-.
-                       _..--' _'-' '--'.-. |
-                __,,-'' _,,-''            \ 1
-               f'. _,,-'                   \ 1
-              ()--  |                       \ 1
-                \.  |                       /  1
-                  \ \                      |._  |
-                   \ \                     |  ()|
-                    \ \                     \  /
-                     ) `-.                   | |
-                    // .__)                  | |
-                 _.//7'                      | |
-               '---'                         j_| `
-                                            (| |
-                                             |  1
-                                             |lllj
-                                             |||||  """)
+       `._;l _'--------_/        )-'/     :  |___.    _._./ ;
+         | |                 .__ )-'\  __  \  \  I   1   / /
+         `-'                /   `-\-(-'   \ \  `.|   | ,' /
+                            \__  `-'    __/  `-. `---'',-'
+                               )-._.-- (        `-----'
+                              )(  l\ o ('..-.
+                        _..--' _'-' '--'.-. |
+                 __,,-'' _,,-''            \ 1
+                f'. _,,-'                   \ 1
+               ()--  |                       \ 1
+                 \.  |                       /  1
+                   \ \                      |._  |
+                    \ \                     |  ()|
+                     \ \                     \  /
+                      ) `-.                   | |
+                     // .__)                  | |
+                 _ ./ /7'                      | |
+                '---'                         j_| `
+                                             (| |
+                                              |  1
+                                              |lllj
+                                              |||||  """)
 
- print ("ett skelet kom fram!")
+ print ("Ett skelet kom fram!")
 
 def DeadEnemy1():
- print ("raslande benen faller och en nyckel ligger på marken")
+ print ("Raslande benen faller och en nyckel ligger på marken")
  time.sleep(2)
 
  print ("Du har nu nyckel i din inventory.")
