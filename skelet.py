@@ -73,5 +73,3 @@ def skeletcombatloop():
             print("GAME OVER")
             break
 
-combatguide()
-skeletcombatloop()

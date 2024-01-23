@@ -44,14 +44,15 @@ def caveright():
 #om man har nyckeln 
 def havekey():
   print ("låsta dörren öppnades och du går igenom")
+  time.sleep(2)
 
 #Room2
 def room2():
   print ("Två öppna vägar är framför dig en åt höger och en åt vänster")
   time.sleep(2)
 
-def straightdoor():
-  print ("Du går igenom tunneln rakt fram")
+def leftdoor1():
+  print ("Du går igenom tunneln åt vänster")
   time.sleep(2)
 
 def rightdoor1():
@@ -61,16 +62,17 @@ def rightdoor1():
 
 #Deadend1
 def deadend1():
-  print ("Du kommer fram till ett room med inga mer väggar men en kista är framför dig")
+  print ("Du är inne i ett rum med inga mer vägar men en kista är framför dig")
   time.sleep(2)
 
-  val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte)"))
+  val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte:\n"))
 
   if val == 1:
      print ("Du öppna kistan och hittade inget där de bara stenar och kol inuti")
 
   if val == 2:
-     print ("Du lämnade rummet och kom tillbaka till rummet du va innan i")
+     print ("Du valde att inte öppna kistan men du kan öppna den senare")
+
 
 #Enemy room 1 
 def enemyroom1():

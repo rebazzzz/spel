@@ -1,3 +1,5 @@
+import Dialoger, time, skelet, lavaskelet, boss
+
 place = 0
 horizont = None
 key1 = False
@@ -11,9 +13,6 @@ riddle_room = False
 
 death = False
 win = False
-
-import Dialoger
-import time
 
 def event():
     global place
@@ -29,7 +28,7 @@ def event():
     global death
     global win
     if place == 2 and horizont == "right" and item_room == False:
-        
+        Dialoger.deadend1()
         item_room = True
         item = True
 
@@ -37,7 +36,9 @@ def event():
         print("hej")
 
     elif place == 3 and horizont == "right" and enemy1_room == False:
-        
+        Dialoger.enemyroom1()
+        skelet.combatguide()
+        skelet.skeletcombatloop()
         enemy1_room = True
         key1 = True
     
@@ -89,7 +90,7 @@ def movement():
     general_option = None
     while general_option not in ["0", "1", "3"]:
 
-        general_option = input("1 för vänster - 0 för höger  - 3 för backåt")
+        general_option = input("1 för vänster - 0 för höger  - 3 för backåt:\n")
 
         if general_option == "0":
             place = place + 1
@@ -113,7 +114,7 @@ def start_movement():
     global riddle_room
     global death
     global win
-    start_option = input("1 för vänster - 0 för höger")
+    start_option = input("1 för vänster - 0 för höger:\n")
 
     if start_option == "0":
         horizont = "right"
@@ -138,7 +139,7 @@ def deadend():
     global win
     deadend_option = None
     while deadend_option != "3":
-        deadend_option = input("du kan bara gå backåt - 3 för backåt")
+        deadend_option = input("du kan bara gå backåt - 3 för backåt:\n")
     
         if deadend_option == "3":
            place = place - 1
@@ -163,7 +164,7 @@ def position():
         start_option = None
         while start_option not in ["0", "1"]:
         
-            start_option = input("1 för vänster (låst) - 0 för höger")
+            start_option = input("1 för vänster (låst) - 0 för höger:\n")
 
             if start_option == "0":
                 Dialoger.caveright()
@@ -175,15 +176,18 @@ def position():
                 print("du kan bara skriva 1 eller 0")
 
     elif place == 1 and horizont == "right" and key1 == False:
+        Dialoger.room2()
         print("Hitta nyckeln")
         general_option = None
         while general_option not in ["0", "1", "3"]:
 
-            general_option = input("1 för vänster - 0 för höger  - 3 för backåt")
+            general_option = input("1 för vänster - 0 för höger  - 3 för backåt:\n")
 
             if general_option == "0":
+                Dialoger.rightdoor1()
                 place = place + 1
             elif general_option == "1":
+                Dialoger.leftdoor1()
                 place = place + 2
             elif general_option == "3":
                 place = place - 1
@@ -192,11 +196,12 @@ def position():
                 print("du kan bara skriva 0 - 1 - 3")
             
     elif place == 2 and horizont == "right" and key1 == False:
+        Dialoger
         print("Hitta nyckeln")
         general_option = None
         while general_option not in ["0", "1", "3"]:
 
-            general_option = input("1 för vänster - 0 för höger  - 3 för backåt")
+            general_option = input("1 för vänster - 0 för höger  - 3 för backåt:\n")
 
             if general_option == "0":
                 place = place + 1
@@ -211,7 +216,7 @@ def position():
         print("Hitta nyckeln")
         deadend_option = None
         while deadend_option != "0":
-            deadend_option = input("du kan bara gå backåt - 0 för backåt")
+            deadend_option = input("du kan bara gå backåt - 0 för backåt:\n")
     
             if deadend_option == "0":
                 place = place - 2
@@ -219,15 +224,18 @@ def position():
                 print("du kan bara skriva 0")
 
     elif place == 1 and horizont == "right" and key1 == True:
+        Dialoger.room2()
         print("du har nyckeln, gå tillbaks och öppna dörren")
         general_option = None
         while general_option not in ["0", "1", "3"]:
 
-            general_option = input("1 för vänster - 0 för höger  - 3 för backåt")
+            general_option = input("1 för vänster - 0 för höger  - 3 för backåt:\n")
 
             if general_option == "0":
+                Dialoger.rightdoor1()
                 place = place + 1
             elif general_option == "1":
+                Dialoger.leftdoor1()
                 place = place + 2
             elif general_option == "3":
                 place = place - 1
@@ -245,7 +253,7 @@ def position():
         print("du har nyckeln, gå tillbaks till start")
         deadend_option = None
         while deadend_option != "0":
-            deadend_option = input("du kan bara gå backåt - 0 för backåt")
+            deadend_option = input("du kan bara gå backåt - 0 för backåt:\n")
     
             if deadend_option == "0":
                 place = place - 2
@@ -256,12 +264,13 @@ def position():
         print("du kan öppna vänsta dörren nu")
         option = None
         while option not in ["0", "1"]:
-            option = input("1 för vänster - 0 för höger")
+            option = input("1 för vänster - 0 för höger:\n")
 
             if option == "0":
                 horizont = "right"
                 place = place + 1
             elif option == "1":
+                Dialoger.havekey()
                 horizont = "left"
                 place = place + 1
 
@@ -269,7 +278,7 @@ def position():
         key_option = None
         while key_option not in ["0", "1", "3"]:
         
-            key_option = input("1 för vänster (låst) - 0 för höger - 3 för att gå backåt")
+            key_option = input("1 för vänster (låst) - 0 för höger - 3 för att gå backåt:\n")
 
             if key_option == "0":
                 place = place + 1
@@ -293,7 +302,7 @@ def position():
         key_option = None
         while key_option not in ["0", "1", "3"]:
         
-            key_option = input("1 för vänster - 0 för höger - 3 för att gå backåt")
+            key_option = input("1 för vänster - 0 för höger - 3 för att gå backåt:\n")
 
             if key_option == "0":
                 place = place + 1
@@ -309,7 +318,7 @@ def position():
         key2_option = None
         while key2_option not in ["0", "1", "3"]:
         
-            key2_option = input("1 för vänster - 0 för höger - 3 för att gå backåt")
+            key2_option = input("1 för vänster - 0 för höger - 3 för att gå backåt:\n")
 
             if key2_option == "0":
                 place = place + 2
@@ -327,7 +336,7 @@ def position():
         end_option = None
         while end_option not in ["0", "1", "3"]:
         
-            end_option = input("1 för vänster - 0 för höger - 3 för att gå backåt")
+            end_option = input("1 för vänster - 0 för höger - 3 för att gå backåt:\n")
 
             if end_option == "0":
                 place = place + 1
@@ -343,14 +352,7 @@ def position():
     elif place == 7:
         print("du van")
 
-print (""" 
-  __ _                        ___           _   _         
- / _\ |_ ___  _ __   ___     /   \___ _ __ | |_| |__  ___ 
- \ \| __/ _ \| '_ \ / _ \   / /\ / _ \ '_ \| __| '_ \/ __|
- _\ \ || (_) | | | |  __/  / /_//  __/ |_) | |_| | | \__ 
- \__/\__\___/|_| |_|\___| /___,' \___| .__/ \__|_| |_|___/
-                                    |_|                  
-        """)
+Dialoger.title()
 Dialoger.room1()
 
 while win != True and death != True:
