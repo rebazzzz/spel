@@ -17,19 +17,19 @@ def spelare_attack():
 
     if attack == 1:
         boss_hp -= pickaxe
-        if boss_hp < 0:
+        if boss_hp <= 0:
             print(f"Bossen är död!")
         else:
             print(f"⚔️ 🗿 💥: Bossen har nu {boss_hp} hp efter din attack.")
     elif attack == 2:
         boss_hp -= yxa
-        if boss_hp < 0:
+        if boss_hp <= 0:
             print(f"Bossen är död:")
         else:
             print(f"⚔️ 🗿 💥💥: Bossen har nu {boss_hp} hp efter din attack.")
     elif attack == 3:
         boss_hp -= magisktlubba
-        if boss_hp < 0:
+        if boss_hp <= 0:
             print(f"Bossen är död!")
         else:
             print(f"⚔️ 🗿 💥💥💥: Bossen har nu {boss_hp} hp efter din attack.")
@@ -49,7 +49,7 @@ def boss_attack():
         print(f"⚔️ 🗿💥💥💥: Du har nu {player_hp} hp efter Bossens attack.")
 
 #spelguide innan man börjar spela
-def combatguide():
+def combat_guide():
     print (f"Du har dessa vapen i din arsenal: {arsenal}.")
     time.sleep(2)
     print(f"Din pickaxe gör 25 damage, yxan gör 30 och den magiska klubban gör 35!")
@@ -58,7 +58,7 @@ def combatguide():
     time.sleep(2)
 
 #loop för combat mellan spelaren och enemy tils en dör
-def bosscombatloop():
+def boss_combatloop():
     """Loop för combat mellan spelaren och enemy"""
     while player_hp > 0 or boss_hp > 0:
         spelare_attack()

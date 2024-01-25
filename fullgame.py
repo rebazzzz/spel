@@ -37,8 +37,8 @@ def event():
 
     elif place == 3 and horizont == "right" and enemy1_room == False:
         Dialoger.enemyroom1()
-        skelet.combatguide()
-        skelet.skeletcombatloop()
+        skelet.combat_guide()
+        skelet.skelet_combatloop()
         enemy1_room = True
         key1 = True
     

@@ -2,7 +2,7 @@
 import random, time
 
 #variabel
-enemy_hp = 110
+lavaskelet_hp = 110
 player_hp = 120
 pickaxe = 25
 yxa = 30
@@ -12,27 +12,27 @@ arsenal = ["Pickaxe 🪓", "Yxa 🔨", "Magisktlubba 🍭✨"]
 #funktion för spelare attack mot enemy
 def spelare_attack():
     """Spelaren attackerar enemy genom att välja vapen i sin arsenal"""
-    global enemy_hp    
+    global lavaskelet_hp    
     attack = int(input("Skriv 1 för Pickaxe, 2 för yxan och 3 för den magiska klubban:\n"))
 
     if attack == 1:
-        enemy_hp -= pickaxe
-        if enemy_hp < 0:
+        lavaskelet_hp -= pickaxe
+        if lavaskelet_hp <= 0:
             print(f" Lava skelettet är död!")
         else:
-            print(f"⚔️ 🦴🔥 💥: Lava skelettet har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴🔥 💥: Lava skelettet har nu {lavaskelet_hp} hp efter din attack.")
     elif attack == 2:
-        enemy_hp -= yxa
-        if enemy_hp < 0:
+        lavaskelet_hp -= yxa
+        if lavaskelet_hp <= 0:
             print(f"Lava skelettet är död:")
         else:
-            print(f"⚔️ 🦴🔥 💥💥: Lava skelettet har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴🔥 💥💥: Lava skelettet har nu {lavaskelet_hp} hp efter din attack.")
     elif attack == 3:
-        enemy_hp -= magisktlubba
-        if enemy_hp < 0:
+        lavaskelet_hp -= magisktlubba
+        if lavaskelet_hp <= 0:
             print(f"Lava skelettet är död!")
         else:
-            print(f"⚔️ 🦴🔥 💥💥💥: Lava skelettet har nu {enemy_hp} hp efter din attack.")
+            print(f"⚔️ 🦴🔥 💥💥💥: Lava skelettet har nu {lavaskelet_hp} hp efter din attack.")
             #⚔️🦴💥
     else:
         print("Använd rätt vapen!")
@@ -43,13 +43,13 @@ def lavaskelet_attack():
     global player_hp
     damage = random.randint(25, 30)
     player_hp -= damage
-    if player_hp < 0:
+    if player_hp <= 0:
         print(f"Du har nu 0 hp efter Lava skelettets attack.")
     else:
         print(f" 🔥🔥🔥🔥: Du har nu {player_hp} hp efter Lava skelettets attack.")
 
 #spelguide innan man börjar spela
-def combatguide():
+def combat_guide():
     print (f"Du har dessa vapen i din arsenal: {arsenal}.")
     time.sleep(2)
     print(f"Din pickaxe gör 25 damage, yxan gör 30 och den magiska klubban gör 35!")
@@ -58,12 +58,12 @@ def combatguide():
     time.sleep(2)
 
 #loop för combat mellan spelaren och enemy tils en dör
-def lavaskeletcombatloop():
+def lavaskelet_combatloop():
     """Loop för combat mellan spelaren och enemy"""
-    while player_hp > 0 or enemy_hp > 0:
+    while player_hp > 0 or lavaskelet_hp > 0:
         spelare_attack()
         time.sleep(0.5)
-        if enemy_hp <= 0:
+        if lavaskelet_hp <= 0:
             print("Raslande benen faller!!!")
             break
 
@@ -72,3 +72,5 @@ def lavaskeletcombatloop():
         if player_hp <= 0:
             print("GAME OVER")
             break
+combatguide()
+lavaskeletcombatloop()
