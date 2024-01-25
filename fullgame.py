@@ -278,7 +278,7 @@ def position():
         key_option = None
         while key_option not in ["0", "1", "3"]:
         
-            key_option = input("Vart vill du gå?- (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):\n")
+            key_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):\n")
 
             if key_option == "0":
                 place = place + 1
