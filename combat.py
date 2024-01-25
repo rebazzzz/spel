@@ -70,5 +70,5 @@ def combatloop():
         enemy_attack()
         time.sleep(0.5)
         if player_hp <= 0:
-            print("GAME OVER")
+            print("GAME OVER")     
             break
