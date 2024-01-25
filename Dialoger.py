@@ -45,6 +45,7 @@ def caveright():
 def havekey():
   print ("låsta dörren öppnades och du går igenom")
 
+
 #Room2
 def room2():
   print ("Två öppna vägar är framför dig en åt höger och en åt vänster")
