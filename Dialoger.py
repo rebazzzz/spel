@@ -26,10 +26,10 @@ def title():
 #Room1
 
 def room1():
-  print ("Du stiger in grottan och känner av de kalla luften forsa över.")
+  print ("Du stiger in grottan och känner av de kalla luften forsa över.\n")
   time.sleep(2)
 
-  print ("Vid gråttans slut finns de två vägar en öppen gråt tunnel åt höger och en dörr åt vänser...")
+  print ("Vid gråttans slut finns de två vägar en öppen gråt tunnel åt höger och en dörr åt vänser...\n")
   time.sleep(2)
 
 def caveleft ():
@@ -218,10 +218,10 @@ def riddle():
 
 #Tomt rum
 def emptyroom():
- print("Du kliver in i the mörka rummet och tänder ett ljus.")
+ print("Du kliver in i det mörka rummet och tänder ett ljus.")
  time.sleep(2)
 
- print("Du ser två öppna dörrar en åt väster och en åt höger...")
+ print("Du ser två öppna dörrar en åt vänster och en åt höger...")
  time.sleep(2)
 
 #Gamla gubbens rum
@@ -263,15 +263,15 @@ def oldman():
  print ("Nu när du har besvarat rätt så ska jag ge dig ledtråden…")
  time.sleep(2)
 
- print ("Vid slutet så kommer två dörrar att visas… En leder till din död men den andra")
+ print ("Vid slutet så kommer två dörrar att visas…")
  time.sleep(2)
 
- print ("tar dig ut från den här gamla grottan… ")
+ print ("Om du väljer dörren åt vänster så kommer glädje att falla över dig...")
  time.sleep(2)
 
 #Boss rummet.
 def boss():
- print("Du går igenom högra dörren och bemöts av en intense känsla...")
+ print("Du går igenom högra dörren och bemöts av en intensiv känsla...")
  time.sleep(2)
 
  print("Stenar och sand faller ner från vägarna!")

@@ -46,14 +46,16 @@ def event():
         print("Hej")
     
     elif place == 1 and horizont == "left" and enemy2_room == False:
-
+        Dialoger.enemyroom2()
+        lavaskelet.combat_guide()
+        lavaskelet.lavaskelet_combatloop()
         enemy2_room = True
     
     elif place == 1 and horizont == "left" and enemy2_room == True:
         print("Hej")
 
     elif place == 2 and horizont == "left" and riddle_room == False:
-
+        Dialoger.riddle()
         riddle_room = True
         key2 = True
     
@@ -61,14 +63,24 @@ def event():
         print("Hej")
     
     elif place == 4 and wiseman_room == False:
-
+        Dialoger.oldman()
         wiseman_room = True
     
     elif place == 4 and wiseman_room == True:
         print
+
+    elif place == 5:
+        Dialoger.boss()
+        boss.combat_guide()
+        boss.boss_combatloop()
+        Dialoger.bossdead()
+
     elif place == 6:
+        Dialoger.lastright()
         death = True
+
     elif place == 7:
+        Dialoger.lastleft()
         win = True
         
 
@@ -267,6 +279,7 @@ def position():
             option = input("Vill du gå höger eller vänster? (Ange 1 för vänster eller 0 för höger):\n")
 
             if option == "0":
+                Dialoger.caveright()
                 horizont = "right"
                 place = place + 1
             elif option == "1":
@@ -291,6 +304,7 @@ def position():
                 print("Du kan bara skriva 1 eller 0 !!!")
 
     elif place == 2 and horizont == "left" and key2 == False:
+
         deadend()
 
     elif place == 2 and horizont == "left" and key2 == True:
@@ -307,6 +321,8 @@ def position():
             if key_option == "0":
                 place = place + 1
             elif key_option == "1":
+                Dialoger.nyckelnvänster()
+                Dialoger.emptyroom()
                 place = place + 2
             elif key_option == "3":
                 place = place - 1
@@ -355,9 +371,12 @@ def position():
 Dialoger.title()
 Dialoger.room1()
 
-while win != True and death != True:
-    position()
-    event()
-    print(place)
+def stone_depth():
+    global death
+    global win
+    while win != True and death != True:
+        position()
+        event()
+    
+    print("The End")
 
-print("The End")
