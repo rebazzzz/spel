@@ -186,35 +186,35 @@ def nyckelnvänster():
 
 #Rum med gåttan
 def riddle():
- print("Rummet är upplyst av lysande crystaler runt om i gråttan.\n")
- time.sleep(2)
+  print("Rummet är upplyst av lysande crystaler runt om i gråttan.\n")
+  time.sleep(2)
 
- print("Du ser en liten staty av en drake i mitten av rummet...\n")
- time.sleep(2)
+  print("Du ser en liten staty av en drake i mitten av rummet...\n")
+  time.sleep(2)
 
- print("Statyn börjar röra sig och dess ögon öppnas!!!\n")
- time.sleep(2)
+  print("Statyn börjar röra sig och dess ögon öppnas!!!\n")
+  time.sleep(2)
 
- punkt = (". . .")
- pop_up_text(punkt, delay=0.5)
+  punkt = (". . .")
+  pop_up_text(punkt, delay=0.5)
 
- print("Mitt namn är Draku.\n")
- time.sleep(2)
+  print("Mitt namn är Draku.\n")
+  time.sleep(2)
 
- print("Besvara min gåtta rätt och jag ger dig nyckeln till de låsta dörren.\n")
- time.sleep(2)
+  print("Besvara min gåtta rätt och jag ger dig nyckeln till de låsta dörren.\n")
+  time.sleep(2)
 
- dragonquest = input(". . . Jag lysser upp natten och styr havets vågor, men lysser inte lika starkt som min bror ?").lower()
- while True:
-   if dragonquest == "måne" or "månen":
-     print("Det är rätt!")
-     break
+ 
+  while True:
+    dragonquest = input(". . . Jag lysser upp natten och styr havets vågor, men lysser inte lika starkt som min bror ?").lower()
+    if dragonquest == "måne" or dragonquest == "månen":
+      print("Det är rätt!")
+      break
+    else:
+      print("Gissa igen!")
 
-   else:
-     print("Gissa igen!")
-
- print("Du fick en nyckel till rummet!")
- time.sleep(2)
+  print("Du fick en nyckel till rummet!")
+  time.sleep(2)
 
 #Tomt rum
 def emptyroom():
@@ -226,10 +226,10 @@ def emptyroom():
 
 #Gamla gubbens rum
 def oldman():
- print("Du kliver in i de vänstra dörren och kollar runt...")
+ print("\nDu kliver in i de vänstra dörren och kollar runt...")
  time.sleep(2)
 
- print("De hörs raslande ljud!")
+ print("De hörs raslande ljud!\n")
  time.sleep(2)
 
  print ("länge sen jag har sett en person här")
@@ -238,13 +238,13 @@ def oldman():
  print ("Ah! ber om ursäkt mitt namn är Gunnar.")
  time.sleep(2)
 
- print ("Du är väl här för Sten Jättens kärna vist?")
+ print ("Du är väl här för Sten Jättens kärna vist?\n")
  time.sleep(2)
 
  print ("Om du vill så kan jag ge dig lite information du kanske vill veta…")
  time.sleep(2)
 
- print ("Men! Besvara min gåta och du får veta.")
+ print ("Men! Besvara min gåta och du får veta.\n")
  time.sleep(2)
  
  print ("Vad är stort och lysser stark i himlen?")
@@ -253,8 +253,8 @@ def oldman():
  while True:
      svar = (input("Vad gissar du på?")).lower()
 
-     if svar == "sol" or "solen":
-        print("Sol3n, det är rätt!")
+     if svar == "sol" or svar == "solen":
+        print("Solen, det är rätt!")
         break
 
      else:
