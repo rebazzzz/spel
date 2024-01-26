@@ -3,7 +3,6 @@ def map_guuide():
           \n\n(Du är här) visar vart du är på kartan. Kartan är riktad mot dig, men pillarna visar vilken sida du kan gå.
           """)
 
-map_guuide()
 
 def start_map():
     print("""

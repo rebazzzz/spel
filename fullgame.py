@@ -30,16 +30,21 @@ def event():
     if place == 2 and horizont == "right" and item_room == False:
         print ("Du är inne i ett rum med inga mer vägar men en kista är framför dig!\n")
         time.sleep(2)
+        while True:
+            val = input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte.):")
 
-        val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte.):"))
+            if val == "1":
+                print ("Du öppna kistan och hittade inget där de bara stenar och kol inuti!\n")
+                item_room = True
+                item = True
+                break
 
-        if val == 1:
-            print ("Du öppna kistan och hittade inget där de bara stenar och kol inuti!\n")
-            item_room = True
-            item = True
-
-        if val == 2:
-            print ("Du valde att inte öppna kistan men du kan öppna den senare!\n")
+            if val == "2":
+                print ("Du valde att inte öppna kistan men du kan öppna den senare!\n")
+                break
+        
+            else:
+                print("Du kan bara ange 1 eller 2")
 
     elif place == 2 and horizont == "right" and item_room == True:
         print("Du har redan vaarit här och öpppnat kistan\n")
@@ -113,7 +118,7 @@ def deadend():
     print("Ange k för att öppna kartan\n")
     while deadend_option != "2":
         
-        deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+        deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):").lower()
     
         if deadend_option == "2":
            back()
@@ -141,10 +146,10 @@ def position():
     if place == 0 and horizont == None and key1 == False:
         
         start_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while start_option not in ["3", "1"]:
             
-            start_option = input("Vill du gå vänster eller höger? (Ange 1 för vänster eller 3 för höger):")
+            start_option = input("Vill du gå vänster eller höger? (Ange 1 för vänster eller 3 för höger):").lower()
 
             if start_option == "3":
                 Dialoger.caveright()
@@ -162,10 +167,10 @@ def position():
         Dialoger.room2()
         print("Hitta nyckeln till den låsta dörren!\n")
         general_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while general_option not in ["3", "1", "2"]:
             
-            general_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
+            general_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):").lower()
 
             if general_option == "3":
                 Dialoger.rightdoor1()
@@ -187,10 +192,10 @@ def position():
         Dialoger
         print("Du behöver hitta en nyckel!")
         deadend_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while deadend_option != "2":
         
-            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):").lower()
     
             if deadend_option == "2":
                 back()
@@ -204,10 +209,10 @@ def position():
     elif place == 3 and horizont == "right" and key1 == False:
         print("Du behöver hitta en nyckel!\n")
         deadend_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while deadend_option != "2":
             
-            deadend_option = input("Ange 2 för att gå bakåt:")
+            deadend_option = input("Ange 2 för att gå bakåt:").lower()
 
             if deadend_option == "2":
                 place = place - 2
@@ -222,10 +227,10 @@ def position():
         Dialoger.room2()
         print("Du har nyckeln nu, gå tillbaks till början och öppna den låsta dörren.\n")
         general_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while general_option not in ["3", "1", "2"]:
 
-            general_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
+            general_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):").lower()
 
             if general_option == "3":
                 Dialoger.rightdoor1()
@@ -246,10 +251,10 @@ def position():
     elif place == 2 and horizont == "right" and key1 == True:
         print("Du har nyckeln, gå tillbaks till start!\n")
         deadend_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while deadend_option != "2":
         
-            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):").lower()
     
             if deadend_option == "2":
                 back()
@@ -263,10 +268,10 @@ def position():
     elif place == 3 and horizont == "right" and key1 == True:
         print("Du har nyckeln, gå tillbaks till början och öppna den låsta dörren.\n")
         deadend_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while deadend_option != "2":
 
-            deadend_option = input("Du kan bara gå bak just nu!!!(Ange 2 för att gå bakåt):")
+            deadend_option = input("Du kan bara gå bak just nu!!!(Ange 2 för att gå bakåt):").lower()
             
             if deadend_option == "2":
                 place = place - 2
@@ -281,10 +286,10 @@ def position():
         print("du är tillbaks till början\n")
         print("Nu kan du öppna vänstra dörren!\n")
         option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while option not in ["3", "1"]:
             
-            option = input("Vill du gå höger eller vänster? (Ange 1 för vänster eller 3 för höger):")
+            option = input("Vill du gå höger eller vänster? (Ange 1 för vänster eller 3 för höger):").lower()
 
             if option == "3":
                 Dialoger.caveright()
@@ -302,10 +307,10 @@ def position():
 
     elif place == 1 and horizont == "left" and key2 == False:
         key_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while key_option not in ["3", "1", "2"]:
             
-            key_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
+            key_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):").lower()
 
             if key_option == "3":
                 place = place + 1
@@ -324,10 +329,10 @@ def position():
 
     elif place == 2 and horizont == "left" and key2 == False:
         deadend_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while deadend_option != "2":
         
-            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):").lower()
     
             if deadend_option == "2":
                 back()
@@ -341,10 +346,10 @@ def position():
     elif place == 2 and horizont == "left" and key2 == True:
         print("Det finns inget mer här.\n")
         deadend_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while deadend_option != "2":
         
-            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):").lower()
     
             if deadend_option == "2":
                 back()
@@ -358,10 +363,10 @@ def position():
     elif place == 1 and horizont == "left" and key2 == True:
         print("Nu kan du öppna den vänstra dörren!\n")
         key_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while key_option not in ["3", "1", "2"]:
             
-            key_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
+            key_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):").lower()
 
             if key_option == "3":
                 place = place + 1
@@ -382,10 +387,10 @@ def position():
     elif place == 3 and horizont == "left":
         print("Det finns inget mer här")
         key2_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while key2_option not in ["3", "1", "2"]:
             
-            key2_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
+            key2_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):").lower()
 
             if key2_option == "3":
                 place = place + 2
@@ -402,10 +407,10 @@ def position():
 
     elif place == 4:
         deadend_option = None
-        print("Ange k för att öppna kartan\n")
+        print("\nAnge k för att öppna kartan\n")
         while deadend_option != "2":
         
-            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):").lower()
     
             if deadend_option == "2":
                 back()
@@ -419,17 +424,14 @@ def position():
     elif place == 5:
         print("Stenarna blockerade vägen tillbaka och du kan bara gå framåt nu\n")
         end_option = None
-        print("Ange k för att öppna kartan\n")
-        while end_option not in ["3", "1", "2"]:
+        while end_option not in ["3", "1"]:
             
-            end_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
+            end_option = input("Vart vill du gå? (Ange 1 för vänster eller 3 för höger):")
 
             if end_option == "3":
                 place = place + 1
             elif end_option == "1":
                 place = place + 2
-            elif end_option == "2":
-                print("Stenarna är för tunga och du lyckas inte ta dig tillbaka\n")
             else: 
                 print("Du kan bara skriva 1 eller 3 !!!\n")
     elif place == 6:
