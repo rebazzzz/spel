@@ -335,6 +335,4 @@ Dialoger.room1()
 while win != True and death != True:
     position()
     event()
-    print(place)
-
-print("The End")
+ 
