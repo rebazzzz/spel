@@ -25,8 +25,12 @@ def title():
 
 #Room1
 
+def kartaintruktion():
+    print("*** Ange k om du vill se kartan ***")
+
+kartaintruktion()
 def room1():
-  print ("Du stiger in i grottan och känner av den kalla luften forsa över.\n")
+  print ("Du vaknar in i grottan och känner av den kalla luften forsa över.\n")
   time.sleep(2)
 
   print ("Vid gråttans slut finns de två vägar en öppen tunnel åt höger och en dörr åt vänster...\n")
