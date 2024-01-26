@@ -26,58 +26,58 @@ def title():
 #Room1
 
 def room1():
-  print ("Du stiger in grottan och känner av de kalla luften forsa över.")
+  print ("Du stiger in grottan och känner av de kalla luften forsa över.\n")
   time.sleep(2)
 
-  print ("Vid gråttans slut finns de två vägar en öppen gråt tunnel åt höger och en dörr åt vänser...")
+  print ("Vid gråttans slut finns de två vägar en öppen gråt tunnel åt höger och en dörr åt vänser...\n")
   time.sleep(2)
 
 def caveleft ():
-  print ("Du går mot dörren och försöker öppna den men den är låst och du går tillbaka till var du börja.")
+  print ("Du går mot dörren och försöker öppna den men den är låst och du går tillbaka till var du börja.\n")
   time.sleep(2)
 
 def caveright():
-  print ("Du går igenom tunneln och kommer till ett nytt rum...")
+  print ("Du går igenom tunneln och fortsätter in i grottan åt höger...\n")
   time.sleep(2)
 
 
 #om man har nyckeln 
 def havekey():
-  print ("låsta dörren öppnades och du går igenom.")
+  print ("låsta dörren öppnades och du går igenom.\n")
   time.sleep(2)
 
 
 #Room2
 def room2():
-  print ("Två öppna vägar är framför dig en åt höger och en åt vänster...")
+  print ("Två öppna vägar är framför dig en åt höger och en åt vänster...\n")
   time.sleep(2)
 
 def leftdoor1():
-  print ("Du går igenom tunneln åt vänster!")
+  print ("Du går igenom tunneln åt vänster!\n")
   time.sleep(2)
 
 def rightdoor1():
-  print ("Du går igenom tunneln åt höger!")
+  print ("Du går igenom tunneln åt höger!\n")
   time.sleep(2)
 
 
 #Deadend1
 def deadend1():
-  print ("Du är inne i ett rum med inga mer vägar men en kista är framför dig!")
+  print ("Du är inne i ett rum med inga mer vägar men en kista är framför dig!\n")
   time.sleep(2)
 
   val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte.):\n"))
 
   if val == 1:
-     print ("Du öppna kistan och hittade inget där de bara stenar och kol inuti!")
+     print ("Du öppna kistan och hittade inget där de bara stenar och kol inuti!\n")
 
   if val == 2:
-     print ("Du valde att inte öppna kistan men du kan öppna den senare!")
+     print ("Du valde att inte öppna kistan men du kan öppna den senare!\n")
 
 
 #Enemy room 1 
 def enemyroom1():
- print ("Rummet är kallt och du hör raslande ljud åt andra sidan grått rummet.")
+ print ("Rummet är kallt och du hör raslande ljud åt andra sidan grått rummet.\n")
  time.sleep(2)
 
  print("""
@@ -120,22 +120,22 @@ def enemyroom1():
                                               |lllj
                                               |||||  """)
 
- print ("Ett skelet kom fram!!!")
+ print ("Ett skelet kom fram!!!\n")
 
 def DeadEnemy1():
- print ("Raslande benen faller och en nyckel ligger på marken...")
+ print ("Raslande benen faller och en nyckel ligger på marken...\n")
  time.sleep(2)
 
- print ("Du har nu nyckel i din inventory!")
+ print ("Du har nu nyckel i din inventory!\n")
  time.sleep(2)
 
 
 #Enemy room 2
 def enemyroom2():
- print ("Rummet känns kallare än för ut och ljud av fallande stenar hörs...")
+ print ("Rummet känns kallare än för ut och ljud av fallande stenar hörs...\n")
  time.sleep(2)
 
- print ("Något börjar komma fram från de mörka gråtta mot dig!")
+ print ("Något börjar komma fram från de mörka gråtta mot dig!\n")
  time.sleep(2)
 
  print("""           )        )
@@ -163,45 +163,45 @@ def enemyroom2():
             \..`_       -+-       _'  )
   )            . `--=.._____..=--'. ./     """)
 
- print("Ett skelet kom fram!!!")
+ print("Ett skelet kom fram!!!\n")
 
 def DeadEnemy2():
- print("Skeletet har dött och du går till slutet av gråt rummet.")
+ print("Skeletet har dött och du går till slutet av gråt rummet.\n")
  time.sleep(2)
 
- print ("Framför dig finns två dörrar en åt höger och en åt vänster...")
+ print ("Framför dig finns två dörrar en åt höger och en åt vänster...\n")
  time.sleep(2)
 
 #höger dörren
 def rightdoor2():
- print("Dörren är olåst och du går igenom den.")
+ print("Dörren är olåst och du går igenom den.\n")
 
 #vänster dörren
 def leftdoor():
- print("Dörren är låst!")
+ print("Dörren är låst!\n")
 
 #om man har nyckeln
 def nyckelnvänster():
- print("De låsta dörren öppnades och du går igenom dörren till nästa rum...")
+ print("De låsta dörren öppnades och du går igenom dörren till nästa rum...\n")
 
 #Rum med gåttan
 def riddle():
- print("Rummet är upplyst av lysande crystaler runt om i gråttan.")
+ print("Rummet är upplyst av lysande crystaler runt om i gråttan.\n")
  time.sleep(2)
 
- print("Du ser en liten staty av en drake i mitten av rummet...")
+ print("Du ser en liten staty av en drake i mitten av rummet...\n")
  time.sleep(2)
 
- print("Statyn börjar röra sig och dess ögon öppnas!!!")
+ print("Statyn börjar röra sig och dess ögon öppnas!!!\n")
  time.sleep(2)
 
  punkt = (". . .")
  pop_up_text(punkt, delay=0.5)
 
- print("Mitt namn är Draku.")
+ print("Mitt namn är Draku.\n")
  time.sleep(2)
 
- print("Besvara min gåtta rätt och jag ger dig nyckeln till de låsta dörren.")
+ print("Besvara min gåtta rätt och jag ger dig nyckeln till de låsta dörren.\n")
  time.sleep(2)
 
  dragonquest = input(". . . Jag lysser upp natten och styr havets vågor, men lysser inte lika starkt som min bror ?").lower()
@@ -218,10 +218,10 @@ def riddle():
 
 #Tomt rum
 def emptyroom():
- print("Du kliver in i the mörka rummet och tänder ett ljus.")
+ print("Du kliver in i det mörka rummet och tänder ett ljus.")
  time.sleep(2)
 
- print("Du ser två öppna dörrar en åt väster och en åt höger...")
+ print("Du ser två öppna dörrar en åt vänster och en åt höger...")
  time.sleep(2)
 
 #Gamla gubbens rum
@@ -263,15 +263,15 @@ def oldman():
  print ("Nu när du har besvarat rätt så ska jag ge dig ledtråden…")
  time.sleep(2)
 
- print ("Vid slutet så kommer två dörrar att visas… En leder till din död men den andra")
+ print ("Vid slutet så kommer två dörrar att visas…")
  time.sleep(2)
 
- print ("tar dig ut från den här gamla grottan… ")
+ print ("Om du väljer dörren åt vänster så kommer glädje att falla över dig...")
  time.sleep(2)
 
 #Boss rummet.
 def boss():
- print("Du går igenom högra dörren och bemöts av en intense känsla...")
+ print("Du går igenom högra dörren och bemöts av en intensiv känsla...")
  time.sleep(2)
 
  print("Stenar och sand faller ner från vägarna!")

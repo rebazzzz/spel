@@ -72,5 +72,3 @@ def lavaskelet_combatloop():
         if player_hp <= 0:
             print("GAME OVER")
             break
-combatguide()
-lavaskeletcombatloop()
