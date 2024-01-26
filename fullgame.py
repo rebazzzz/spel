@@ -339,5 +339,4 @@ def stone_depth():
         position()
         event()
     
-    print("The End")
-
+  
