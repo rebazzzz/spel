@@ -6,10 +6,13 @@ som befinner sig djupt i en grotta.
 I grottan kommer du att bemötas av fiender och gåttor. Där olika karaktärer kommer hindra från att komma till 
 sten jätten.
 
-__Koden ska köras i VScode.__
+___
 
-(_Man behöver ladda ner Dialoger.py, skelet.py, lavaskelet.py, boss.py, fullgame.py, main.py_)
+- __Koden ska köras i VScode.__
 
-__Använd _main.py_ för att köra spelet.__
+- __Man behöver ladda ner Dialoger.py, skelet.py, lavaskelet.py, boss.py, fullgame.py, main.py__
+
+- __Använd _main.py_ för att köra spelet.__
+___
 
 ## Mer info om arbetet i Trello.
