@@ -37,7 +37,7 @@ def caveleft ():
   time.sleep(2)
 
 def caveright():
-  print ("Du går igenom tunneln och kommer till ett nytt rum...")
+  print ("Du går igenom tunneln och fortsätter in i grottan åt höger...")
   time.sleep(2)
 
 
