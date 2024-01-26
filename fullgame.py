@@ -280,6 +280,7 @@ def position():
                 place = place + 1
             elif key_option == "1":
                 Dialoger.nyckelnvänster()
+                Dialoger.emptyroom()
                 place = place + 2
             elif key_option == "3":
                 back()
@@ -289,7 +290,7 @@ def position():
                 print("Du kan bara skriva 1 eller 0 !!!\n")
 
     elif place == 3 and horizont == "left":
-        Dialoger.emptyroom()
+        print("Det finns inget mer här")
         key2_option = None
         while key2_option not in ["0", "1", "3"]:
         
@@ -338,5 +339,3 @@ def stone_depth():
     while win != True and death != True:
         position()
         event()
-    
-  
