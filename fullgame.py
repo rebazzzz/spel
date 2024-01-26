@@ -1,4 +1,4 @@
-import Dialoger, time, skelet, lavaskelet, boss
+import Dialoger, time, skelet, lavaskelet, boss, maps
 
 place = 0
 horizont = None
@@ -110,12 +110,16 @@ def deadend():
     global death
     global win
     deadend_option = None
+    print("Ange k för att öppna kartan\n")
     while deadend_option != "2":
+        
         deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
     
         if deadend_option == "2":
            back()
            place = place - 1
+        elif deadend_option == "k":
+            maps.map_guuide()
         else:
             print("Du kan bara skriva 2 !!!\n")
         
@@ -137,8 +141,9 @@ def position():
     if place == 0 and horizont == None and key1 == False:
         
         start_option = None
+        print("Ange k för att öppna kartan\n")
         while start_option not in ["3", "1"]:
-        
+            
             start_option = input("Vill du gå vänster eller höger? (Ange 1 för vänster eller 3 för höger):")
 
             if start_option == "3":
@@ -147,6 +152,9 @@ def position():
                 place = place + 1
             elif start_option == "1":
                 Dialoger.caveleft()
+            elif start_option == "k":
+                maps.map_guuide()
+                maps.start_map()
             else: 
                 print("Du kan bara skriva 1 eller 3 !!!\n")
 
@@ -154,8 +162,9 @@ def position():
         Dialoger.room2()
         print("Hitta nyckeln till den låsta dörren!\n")
         general_option = None
+        print("Ange k för att öppna kartan\n")
         while general_option not in ["3", "1", "2"]:
-
+            
             general_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
 
             if general_option == "3":
@@ -168,24 +177,44 @@ def position():
                 back()
                 place = place - 1
                 horizont = None
+            elif general_option == "k":
+                maps.map_guuide()
+                maps.högra_tunneln_map()
             else:
                 print("Du kan bara skriva 3, 1 eller 2 !!!\n")
             
     elif place == 2 and horizont == "right" and key1 == False:
         Dialoger
-        print("Du behöver att hitta en nyckel!")
-        general_option = None
-        deadend()
+        print("Du behöver hitta en nyckel!")
+        deadend_option = None
+        print("Ange k för att öppna kartan\n")
+        while deadend_option != "2":
+        
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+    
+            if deadend_option == "2":
+                back()
+                place = place - 1
+            elif deadend_option == "k":
+                maps.map_guuide()
+                maps.dead_end_map()
+            else:
+                print("Du kan bara skriva 2 !!!\n")
             
     elif place == 3 and horizont == "right" and key1 == False:
         print("Du behöver hitta en nyckel!\n")
         deadend_option = None
+        print("Ange k för att öppna kartan\n")
         while deadend_option != "2":
+            
             deadend_option = input("Ange 2 för att gå bakåt:")
-    
+
             if deadend_option == "2":
                 place = place - 2
                 back()
+            elif deadend_option == "k":
+                maps.map_guuide()
+                maps.skelet_map()
             else:
                 print("Bakåt är den enda vägen!(Ange 2 för att gå bakåt)\n")
 
@@ -193,6 +222,7 @@ def position():
         Dialoger.room2()
         print("Du har nyckeln nu, gå tillbaks till början och öppna den låsta dörren.\n")
         general_option = None
+        print("Ange k för att öppna kartan\n")
         while general_option not in ["3", "1", "2"]:
 
             general_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
@@ -207,22 +237,43 @@ def position():
                 back()
                 place = place - 1
                 horizont = None
+            elif general_option == "k":
+                maps.map_guuide()
+                maps.högra_tunneln_map()
             else:
                 print("Du kan bara skriva 3, 1 eller 2 !!!\n")
 
     elif place == 2 and horizont == "right" and key1 == True:
         print("Du har nyckeln, gå tillbaks till start!\n")
-        deadend()
+        deadend_option = None
+        print("Ange k för att öppna kartan\n")
+        while deadend_option != "2":
+        
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+    
+            if deadend_option == "2":
+                back()
+                place = place - 1
+            elif deadend_option == "k":
+                maps.map_guuide()
+                maps.dead_end_map()
+            else:
+                print("Du kan bara skriva 2 !!!\n")
 
     elif place == 3 and horizont == "right" and key1 == True:
         print("Du har nyckeln, gå tillbaks till början och öppna den låsta dörren.\n")
         deadend_option = None
+        print("Ange k för att öppna kartan\n")
         while deadend_option != "2":
+
             deadend_option = input("Du kan bara gå bak just nu!!!(Ange 2 för att gå bakåt):")
-    
+            
             if deadend_option == "2":
                 place = place - 2
                 back()
+            elif deadend_option == "k":
+                maps.map_guuide()
+                maps.skelet_map()
             else:
                 print("Du kan bara skriva 2 !!!\n")
 
@@ -230,7 +281,9 @@ def position():
         print("du är tillbaks till början\n")
         print("Nu kan du öppna vänstra dörren!\n")
         option = None
+        print("Ange k för att öppna kartan\n")
         while option not in ["3", "1"]:
+            
             option = input("Vill du gå höger eller vänster? (Ange 1 för vänster eller 3 för höger):")
 
             if option == "3":
@@ -241,13 +294,17 @@ def position():
                 Dialoger.havekey()
                 horizont = "left"
                 place = place + 1
+            elif option == 'k':
+                maps.map_guuide()
+                maps.start_map()
             else: 
                 print("Du kan bara skriva 1 eller 3 !!!\n")
 
     elif place == 1 and horizont == "left" and key2 == False:
         key_option = None
+        print("Ange k för att öppna kartan\n")
         while key_option not in ["3", "1", "2"]:
-        
+            
             key_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
 
             if key_option == "3":
@@ -259,21 +316,51 @@ def position():
                 horizont = None
                 print("du går tillbaka till grottan bakom dig")
                 time.sleep(1)
+            elif key_option == "k":
+                maps.map_guuide()
+                maps.lava_skelet_map()
             else: 
                 print("Du kan bara skriva 1 eller 3 !!!\n")
 
     elif place == 2 and horizont == "left" and key2 == False:
-        deadend()
+        deadend_option = None
+        print("Ange k för att öppna kartan\n")
+        while deadend_option != "2":
+        
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+    
+            if deadend_option == "2":
+                back()
+                place = place - 1
+            elif deadend_option == "k":
+                maps.map_guuide()
+                maps.draku_map()
+            else:
+                print("Du kan bara skriva 2 !!!\n")
 
     elif place == 2 and horizont == "left" and key2 == True:
         print("Det finns inget mer här.\n")
-        deadend()
+        deadend_option = None
+        print("Ange k för att öppna kartan\n")
+        while deadend_option != "2":
+        
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+    
+            if deadend_option == "2":
+                back()
+                place = place - 1
+            elif deadend_option == "k":
+                maps.map_guuide()
+                maps.draku_map()
+            else:
+                print("Du kan bara skriva 2 !!!\n")
 
     elif place == 1 and horizont == "left" and key2 == True:
         print("Nu kan du öppna den vänstra dörren!\n")
         key_option = None
+        print("Ange k för att öppna kartan\n")
         while key_option not in ["3", "1", "2"]:
-        
+            
             key_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
 
             if key_option == "3":
@@ -286,14 +373,18 @@ def position():
                 back()
                 place = place - 1
                 horizont = None
+            elif key_option == "k":
+                maps.map_guuide()
+                maps.lava_skelet_map()
             else: 
                 print("Du kan bara skriva 1 eller 3 !!!\n")
 
     elif place == 3 and horizont == "left":
         print("Det finns inget mer här")
         key2_option = None
+        print("Ange k för att öppna kartan\n")
         while key2_option not in ["3", "1", "2"]:
-        
+            
             key2_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
 
             if key2_option == "3":
@@ -303,17 +394,34 @@ def position():
             elif key2_option == "2":
                 back()
                 place = place - 2
+            elif key2_option == 'k':
+                maps.map_guuide()
+                maps.tom_tunnel2_map()
             else: 
                 print("Du kan bara skriva 1, 3 eller 2 !!!\n")
 
     elif place == 4:
-        deadend()
+        deadend_option = None
+        print("Ange k för att öppna kartan\n")
+        while deadend_option != "2":
+        
+            deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):")
+    
+            if deadend_option == "2":
+                back()
+                place = place - 1
+            elif deadend_option == "k":
+                maps.map_guuide()
+                maps.gammal_man_map()
+            else:
+                print("Du kan bara skriva 2 !!!\n")
 
     elif place == 5:
         print("Stenarna blockerade vägen tillbaka och du kan bara gå framåt nu\n")
         end_option = None
+        print("Ange k för att öppna kartan\n")
         while end_option not in ["3", "1", "2"]:
-        
+            
             end_option = input("Vart vill du gå? (Ange 1 för vänster, 3 för höger eller 2 för att gå bakåt):")
 
             if end_option == "3":
