@@ -338,4 +338,6 @@ def stone_depth():
     while win != True and death != True:
         position()
         event()
+    
+    print("The End")
 
