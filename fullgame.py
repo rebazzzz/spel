@@ -28,24 +28,7 @@ def event():
     global death
     global win
     if place == 2 and horizont == "right" and item_room == False:
-        print ("Du är inne i ett rum med inga mer vägar men en kista är framför dig!\n")
-        time.sleep(2)
-        while True:
-            val = input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte.):")
-
-            if val == "1":
-                print ("Du öppna kistan och hittade inget där de bara stenar och kol inuti!\n")
-                item_room = True
-                item = True
-                break
-
-            if val == "2":
-                print ("Du valde att inte öppna kistan men du kan öppna den senare!\n")
-                break
-        
-            else:
-                print("Du kan bara ange 1 eller 2")
-
+        Dialoger.loreinfo()
     elif place == 2 and horizont == "right" and item_room == True:
         print("Du har redan vaarit här och öpppnat kistan\n")
 
@@ -126,7 +109,7 @@ def deadend():
         elif deadend_option == "k":
             maps.map_guuide()
         else:
-            print("Du kan bara skriva 2 !!!\n")
+            print("Du kan bara skriva 2 eller k !!!\n")
         
 
 
@@ -161,7 +144,7 @@ def position():
                 maps.map_guuide()
                 maps.start_map()
             else: 
-                print("Du kan bara skriva 1 eller 3 !!!\n")
+                print("Du kan bara skriva 1, 3 ellr k !!!\n")
 
     elif place == 1 and horizont == "right" and key1 == False:
         Dialoger.room2()
@@ -186,7 +169,7 @@ def position():
                 maps.map_guuide()
                 maps.högra_tunneln_map()
             else:
-                print("Du kan bara skriva 3, 1 eller 2 !!!\n")
+                print("Du kan bara skriva 3, 1, 2 !!!\n")
             
     elif place == 2 and horizont == "right" and key1 == False:
         Dialoger

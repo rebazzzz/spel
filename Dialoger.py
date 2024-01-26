@@ -62,17 +62,13 @@ def rightdoor1():
 
 
 #Deadend1
-def deadend1():
-  print ("Du är inne i ett rum med inga mer vägar men en kista är framför dig!\n")
+def loreinfo():
+  print ("""Du befinner dig i ett rum utan fler utvägar och hör ett ljud. 
+  "Nu när du har kommit in i Gråttan, kan du inte lämna förrän du har tagit Stenjättens kärna. Många har inträtt i Gråttan, men ingen har lyckats lämna. Det ögonblick du trädde in utlöste du Acinet cursen och är nu fast i en evig loop.    
+   Det kan vara din femte loop, men du har ingen aning. Inte ens döden kan bryta cursen. För att bryta denna förbannelse, bege dig nu mot målet och ta Stenjättens kärna. Tiden är knapp, och varje ögonblick räknas."
+        """)
   time.sleep(2)
 
-  val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte.):\n"))
-
-  if val == 1:
-     print ("Du öppnar kistan och hittar ingenting förutom stenar och kol.\n")
-
-  if val == 2:
-     print ("Du valde att inte öppna kistan, du kan komma tillbaka för att öppna den!\n")
 
 
 #Enemy room 1 
