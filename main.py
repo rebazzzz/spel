@@ -1,3 +1,3 @@
 import fullgame
 
-fullgame.stone_depth()
+fullgame.stone_depth() 
