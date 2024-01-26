@@ -31,7 +31,7 @@ def event():
         print ("Du är inne i ett rum med inga mer vägar men en kista är framför dig!\n")
         time.sleep(2)
 
-        val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte.):\n"))
+        val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte.):"))
 
         if val == 1:
             print ("Du öppna kistan och hittade inget där de bara stenar och kol inuti!\n")
@@ -52,7 +52,7 @@ def event():
         key1 = True
     
     elif place == 3 and horizont == "right" and enemy1_room == True:
-        print("Hej")
+        print("skeletet är död och det finns inget mer här")
     
     elif place == 1 and horizont == "left" and enemy2_room == False:
         Dialoger.enemyroom2()
@@ -61,7 +61,7 @@ def event():
         enemy2_room = True
     
     elif place == 1 and horizont == "left" and enemy2_room == True:
-        print("Hej")
+        print("lavaskeletet är död men det finns en ny dörr som verkar vara låst\n")
 
     elif place == 2 and horizont == "left" and riddle_room == False:
         Dialoger.riddle()
@@ -69,14 +69,14 @@ def event():
         key2 = True
     
     elif place == 2 and horizont == "left" and riddle_room == True:
-        print("Hej")
+        print("du går tillbaks till Draku men han har inge fler gåtor åt dig\n")
     
     elif place == 4 and wiseman_room == False:
         Dialoger.oldman()
         wiseman_room = True
     
     elif place == 4 and wiseman_room == True:
-        print
+        print("Du går tillbaks till Gunnar men han har inga fler gåtor åt dig\n")
 
     elif place == 5:
         Dialoger.boss()
@@ -91,6 +91,10 @@ def event():
     elif place == 7:
         Dialoger.lastleft()
         win = True
+
+def back():
+    print("du går tillbaka till grottan bakom dig och är där nu\n")
+    time.sleep(1)
 
 def deadend():
     global place
@@ -107,14 +111,15 @@ def deadend():
     global win
     deadend_option = None
     while deadend_option != "3":
-        deadend_option = input("Du kan bara gå bak just nu!!! (Ange 3 för att gå backåt):\n")
+        deadend_option = input("Du kan bara gå bak just nu!!! (Ange 3 för att gå backåt):")
     
         if deadend_option == "3":
+           back()
            place = place - 1
-           print("du går tillbaka till grottan bakom dig")
-           time.sleep(2)
         else:
             print("Du kan bara skriva 3 !!!\n")
+        
+
 
 def position():
     global place
@@ -134,7 +139,7 @@ def position():
         start_option = None
         while start_option not in ["0", "1"]:
         
-            start_option = input("Vill du gå vänster eller höger? (Ange 1 för vänster eller 0 för höger):\n")
+            start_option = input("Vill du gå vänster eller höger? (Ange 1 för vänster eller 0 för höger):")
 
             if start_option == "0":
                 Dialoger.caveright()
@@ -147,11 +152,11 @@ def position():
 
     elif place == 1 and horizont == "right" and key1 == False:
         Dialoger.room2()
-        print("Du behöver att hitta en nyckel!\n")
+        print("Hitta nyckeln till den låsta dörren!\n")
         general_option = None
         while general_option not in ["0", "1", "3"]:
 
-            general_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):\n")
+            general_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):")
 
             if general_option == "0":
                 Dialoger.rightdoor1()
@@ -160,8 +165,7 @@ def position():
                 Dialoger.leftdoor1()
                 place = place + 2
             elif general_option == "3":
-                print("du går tillbaka till grottan bakom dig")
-                time.sleep(2)
+                back()
                 place = place - 1
                 horizont = None
             else:
@@ -177,22 +181,21 @@ def position():
         print("Du behöver hitta en nyckel!\n")
         deadend_option = None
         while deadend_option != "3":
-            deadend_option = input("Ange 3 för att gå backåt:\n")
+            deadend_option = input("Ange 3 för att gå backåt:")
     
             if deadend_option == "3":
                 place = place - 2
-                print("du går tillbaka till grottan bakom dig")
-                time.sleep(2)
+                back()
             else:
                 print("Bakåt är den enda vägen!(Ange 3 för att gå bakåt)\n")
 
     elif place == 1 and horizont == "right" and key1 == True:
         Dialoger.room2()
-        print("Du har nyckeln nu, gå tillbaks och öppna dörren.\n")
+        print("Du har nyckeln nu, gå tillbaks till början och öppna den låsta dörren.\n")
         general_option = None
         while general_option not in ["0", "1", "3"]:
 
-            general_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):\n")
+            general_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):")
 
             if general_option == "0":
                 Dialoger.rightdoor1()
@@ -201,6 +204,7 @@ def position():
                 Dialoger.leftdoor1()
                 place = place + 2
             elif general_option == "3":
+                back()
                 place = place - 1
                 horizont = None
             else:
@@ -211,22 +215,23 @@ def position():
         deadend()
 
     elif place == 3 and horizont == "right" and key1 == True:
-        print("Det finns inget mer här.\n")
-        print("Du har nyckeln, gå tillbaks till start.\n")
+        print("Du har nyckeln, gå tillbaks till början och öppna den låsta dörren.\n")
         deadend_option = None
         while deadend_option != "3":
-            deadend_option = input("Du kan bara gå back just nu!!!(Ange 3 för att gå backåt):\n")
+            deadend_option = input("Du kan bara gå back just nu!!!(Ange 3 för att gå backåt):")
     
             if deadend_option == "3":
                 place = place - 2
+                back()
             else:
                 print("Du kan bara skriva 3 !!!\n")
 
     elif place == 0 and horizont == None and key1 == True:
-        print("Nu kan du öppna vänstra dörren!")
+        print("du är tillbaks till början\n")
+        print("Nu kan du öppna vänstra dörren!\n")
         option = None
         while option not in ["0", "1"]:
-            option = input("Vill du gå höger eller vänster? (Ange 1 för vänster eller 0 för höger):\n")
+            option = input("Vill du gå höger eller vänster? (Ange 1 för vänster eller 0 för höger):")
 
             if option == "0":
                 Dialoger.caveright()
@@ -236,12 +241,14 @@ def position():
                 Dialoger.havekey()
                 horizont = "left"
                 place = place + 1
+            else: 
+                print("Du kan bara skriva 1 eller 0 !!!\n")
 
     elif place == 1 and horizont == "left" and key2 == False:
         key_option = None
         while key_option not in ["0", "1", "3"]:
         
-            key_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):\n")
+            key_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):")
 
             if key_option == "0":
                 place = place + 1
@@ -250,11 +257,12 @@ def position():
             elif key_option == "3":
                 place = place - 1
                 horizont = None
+                print("du går tillbaka till grottan bakom dig")
+                time.sleep(1)
             else: 
                 print("Du kan bara skriva 1 eller 0 !!!\n")
 
     elif place == 2 and horizont == "left" and key2 == False:
-
         deadend()
 
     elif place == 2 and horizont == "left" and key2 == True:
@@ -266,31 +274,33 @@ def position():
         key_option = None
         while key_option not in ["0", "1", "3"]:
         
-            key_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):\n")
+            key_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):")
 
             if key_option == "0":
                 place = place + 1
             elif key_option == "1":
                 Dialoger.nyckelnvänster()
-                Dialoger.emptyroom()
                 place = place + 2
             elif key_option == "3":
+                back()
                 place = place - 1
                 horizont = None
             else: 
                 print("Du kan bara skriva 1 eller 0 !!!\n")
 
     elif place == 3 and horizont == "left":
+        Dialoger.emptyroom()
         key2_option = None
         while key2_option not in ["0", "1", "3"]:
         
-            key2_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):\n")
+            key2_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):")
 
             if key2_option == "0":
                 place = place + 2
             elif key2_option == "1":
                 place = place + 1
             elif key2_option == "3":
+                back()
                 place = place - 2
             else: 
                 print("Du kan bara skriva 1, 0 eller 3 !!!\n")
@@ -299,18 +309,18 @@ def position():
         deadend()
 
     elif place == 5:
-        ("Stenarna blockerade vägen tillbaka och du kan bara gå framåt nu\n")
+        print("Stenarna blockerade vägen tillbaka och du kan bara gå framåt nu\n")
         end_option = None
         while end_option not in ["0", "1", "3"]:
         
-            end_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):\n")
+            end_option = input("Vart vill du gå? (Ange 1 för vänster, 0 för höger eller 3 för att gå backåt):")
 
             if end_option == "0":
                 place = place + 1
             elif end_option == "1":
                 place = place + 2
             elif end_option == "3":
-                print("Stenarna är för tunga och du lyckas inte ta dig tillbaka")
+                print("Stenarna är för tunga och du lyckas inte ta dig tillbaka\n")
             else: 
                 print("Du kan bara skriva 1 eller 0 !!!\n")
     elif place == 6:
