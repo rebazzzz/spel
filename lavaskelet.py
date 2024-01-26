@@ -64,7 +64,7 @@ def lavaskelet_combatloop():
         spelare_attack()
         time.sleep(0.5)
         if lavaskelet_hp <= 0:
-            print("Raslande benen faller!!!")
+            print("Raslande benen faller!!!\n")
             break
 
         lavaskelet_attack()
