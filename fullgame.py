@@ -332,7 +332,12 @@ def position():
 Dialoger.title()
 Dialoger.room1()
 
-while win != True and death != True:
-    position()
-    event()
- 
+def stone_depth():
+    global death
+    global win
+    while win != True and death != True:
+        position()
+        event()
+    
+    print("The End")
+
