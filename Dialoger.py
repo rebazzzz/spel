@@ -26,10 +26,10 @@ def title():
 #Room1
 
 def room1():
-  print ("Du stiger in grottan och känner av de kalla luften forsa över.\n")
+  print ("Du stiger in i grottan och känner av den kalla luften forsa över.\n")
   time.sleep(2)
 
-  print ("Vid gråttans slut finns de två vägar en öppen gråt tunnel åt höger och en dörr åt vänser...\n")
+  print ("Vid gråttans slut finns de två vägar en öppen tunnel åt höger och en dörr åt vänster...\n")
   time.sleep(2)
 
 def caveleft ():
@@ -69,15 +69,15 @@ def deadend1():
   val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte.):\n"))
 
   if val == 1:
-     print ("Du öppna kistan och hittade inget där de bara stenar och kol inuti!\n")
+     print ("Du öppnar kistan och hittar ingenting förutom stenar och kol.\n")
 
   if val == 2:
-     print ("Du valde att inte öppna kistan men du kan öppna den senare!\n")
+     print ("Du valde att inte öppna kistan, du kan komma tillbaka för att öppna den!\n")
 
 
 #Enemy room 1 
 def enemyroom1():
- print ("Rummet är kallt och du hör raslande ljud åt andra sidan grått rummet.\n")
+ print ("Rummet är kallt och du hör raslande ljud från andra sidan.\n")
  time.sleep(2)
 
  print("""
@@ -126,16 +126,16 @@ def DeadEnemy1():
  print ("Raslande benen faller och en nyckel ligger på marken...\n")
  time.sleep(2)
 
- print ("Du har nu nyckel i din inventory!\n")
+ print ("Du plockar upp nyckeln från marken\n")
  time.sleep(2)
 
 
 #Enemy room 2
 def enemyroom2():
- print ("Rummet känns kallare än för ut och ljud av fallande stenar hörs...\n")
+ print ("Rummet känns varmare än förut och ljud av fallande stenar hörs...\n")
  time.sleep(2)
 
- print ("Något börjar komma fram från de mörka gråtta mot dig!\n")
+ print ("Något börjar komma fram från den mörka gråttan mot dig!\n")
  time.sleep(2)
 
  print("""           )        )
@@ -166,7 +166,7 @@ def enemyroom2():
  print("Ett skelet kom fram!!!\n")
 
 def DeadEnemy2():
- print("Skeletet har dött och du går till slutet av gråt rummet.\n")
+ print("Skeletet har dött och du går till slutet av gråttan.\n")
  time.sleep(2)
 
  print ("Framför dig finns två dörrar en åt höger och en åt vänster...\n")
@@ -182,7 +182,7 @@ def leftdoor():
 
 #om man har nyckeln
 def nyckelnvänster():
- print("De låsta dörren öppnades och du går igenom dörren till nästa rum...\n")
+ print("Den låsta dörren öppnades och du går igenom dörren till nästa rum...\n")
 
 #Rum med gåttan
 def riddle():
@@ -201,12 +201,12 @@ def riddle():
   print("Mitt namn är Draku.\n")
   time.sleep(2)
 
-  print("Besvara min gåtta rätt och jag ger dig nyckeln till de låsta dörren.\n")
+  print("Besvara min gåta rätt och jag ger dig nyckeln till den låsta dörren.\n")
   time.sleep(2)
 
  
   while True:
-    dragonquest = input(". . . Jag lysser upp natten och styr havets vågor, men lysser inte lika starkt som min bror ?").lower()
+    dragonquest = input(". . . Jag lyser upp natten och styr havets vågor, men lyser inte lika starkt som min bror ?").lower()
     if dragonquest == "måne" or dragonquest == "månen":
       print("Det är rätt!")
       break
@@ -226,19 +226,19 @@ def emptyroom():
 
 #Gamla gubbens rum
 def oldman():
- print("\nDu kliver in i de vänstra dörren och kollar runt...")
+ print("\nDu kliver in i den vänstra dörren och kollar runt...")
  time.sleep(2)
 
  print("De hörs raslande ljud!\n")
  time.sleep(2)
 
- print ("länge sen jag har sett en person här")
+ print ("det var länge sen jag såg en person här")
  time.sleep(2)
 
  print ("Ah! ber om ursäkt mitt namn är Gunnar.")
  time.sleep(2)
 
- print ("Du är väl här för Sten Jättens kärna vist?\n")
+ print ("Jag gissar på att du är här för jättens kärna.\n")
  time.sleep(2)
 
  print ("Om du vill så kan jag ge dig lite information du kanske vill veta…")
@@ -247,7 +247,7 @@ def oldman():
  print ("Men! Besvara min gåta och du får veta.\n")
  time.sleep(2)
  
- print ("Vad är stort och lysser stark i himlen?")
+ print ("Vad är stort och lysser starkt i himlen?")
  time.sleep(2)
 
  while True:
@@ -260,7 +260,7 @@ def oldman():
      else:
          print("Det är fel, försök igen!")
 
- print ("Nu när du har besvarat rätt så ska jag ge dig ledtråden…")
+ print ("Nu när du har gissat rätt så ska jag ge dig ledtråden…")
  time.sleep(2)
 
  print ("Vid slutet så kommer två dörrar att visas…")
@@ -274,7 +274,7 @@ def boss():
  print("Du går igenom högra dörren och bemöts av en intensiv känsla...")
  time.sleep(2)
 
- print("Stenar och sand faller ner från vägarna!")
+ print("Stenar och sand faller ner från väggarna!")
  time.sleep(2)
 
  print("PLIN PLIN PLON ...")
@@ -316,7 +316,7 @@ def bossdead():
  print("Du plockar upp kärnan som du letade efter. ")
  time.sleep(2)
 
- print("Bakom jättens kropp ser du två dörrar en åt höger och en åt vänster...")
+ print("Bakom jättens kropp ser du två vägar en åt höger och en åt vänster...")
  time.sleep(2)
 
 
@@ -336,7 +336,7 @@ def lastright():
  print("Du öppnar dörren och kliver in...")
  time.sleep(2)
 
- print("Framför dig finns de trapor uppåt och du går upp dem...")
+ print("Framför dig finns trappor uppåt och du går upp dem...")
  time.sleep(2)
 
  print("... vid slutet av trapporna öppnar du en dörr och kommer ut från gråttan!")
