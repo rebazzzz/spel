@@ -1,3 +1,8 @@
+def map_guuide():
+    print("Mapen är riktad mot dig, men pillarna visar vilken sida du kan gå.")
+
+
+
 def start_map():
     print("""
                                                          .:::::::::::::::::::::::.:....
