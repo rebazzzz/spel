@@ -26,9 +26,9 @@ def title():
 #Room1
 
 def kartaintruktion():
-    print("*** Ange k om du vill se kartan ***")
+    print("*** Ange 'k' om du vill se var du befinner dig på kartan ***")
 
-kartaintruktion()
+
 def room1():
   print ("Du vaknar in i grottan och känner av den kalla luften forsa över.\n")
   time.sleep(2)
