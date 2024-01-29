@@ -10,7 +10,7 @@ ___
 
 - __Koden ska köras i VScode.__
 
-- __Man behöver ladda ner Dialoger.py, skelet.py, lavaskelet.py, boss.py, fullgame.py, main.py__
+- __Man behöver ladda ner Dialoger.py, skelet.py, lavaskelet.py, boss.py, maps.py, fullgame.py, main.py__
 
 - __Använd _main.py_ för att köra spelet.__
 ___
