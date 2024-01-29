@@ -13,21 +13,21 @@ arsenal = ["Pickaxe 🪓", "Yxa 🔨", "Magisktlubba 🍭✨"]
 def spelare_attack():
     """Spelaren attackerar enemy genom att välja vapen i sin arsenal"""
     global skelet_hp    
-    attack = int(input("Skriv 1 för Pickaxe, 2 för yxan och 3 för den magiska klubban:\n"))
+    attack = input("Skriv 1 för Pickaxe, 2 för yxan och 3 för den magiska klubban:\n")
 
-    if attack == 1:
+    if attack == "1":
         skelet_hp -= pickaxe
         if skelet_hp <= 0:
             print(f"Skelettet är död!")
         else:
             print(f"⚔️ 🦴 💥: Skelettet har nu {skelet_hp} hp efter din attack.")
-    elif attack == 2:
+    elif attack == "2":
         skelet_hp -= yxa
         if skelet_hp <= 0:
             print(f"Skelettet är död:")
         else:
             print(f"⚔️ 🦴 💥💥: Skelettet har nu {skelet_hp} hp efter din attack.")
-    elif attack == 3:
+    elif attack == "3":
         skelet_hp -= magisktlubba
         if skelet_hp <= 0:
             print(f"Skelettet är död!")
