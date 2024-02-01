@@ -9,6 +9,11 @@ yxa = 30
 magisktlubba = 35
 arsenal = ["Pickaxe 🪓", "Yxa 🔨", "Magisktlubba 🍭✨"]
 
+
+# Meddelande när spelaren skriver fel input
+def fel_combat_input():
+    print("Du tar fortfarande skada om du skriver fel input! Du kan bara skriva 1, 2 eller 3")
+
 #funktion för spelare attack mot enemy
 def spelare_attack():
     """Spelaren attackerar enemy genom att välja vapen i sin arsenal"""

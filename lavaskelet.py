@@ -1,5 +1,5 @@
 #import
-import random, time
+import random, time, combat
 
 #variabel
 lavaskelet_hp = 110
@@ -35,7 +35,7 @@ def spelare_attack():
             print(f"⚔️ 🦴🔥 💥💥💥: Lava skelettet har nu {lavaskelet_hp} hp efter din attack.")
             #⚔️🦴💥
     else:
-        print("Använd rätt vapen!")
+        combat.fel_combat_input()
 
 #funktion för enemy attack mot spelaren
 def lavaskelet_attack():
