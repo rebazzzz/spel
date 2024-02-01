@@ -1,5 +1,7 @@
+# importerar alla olika koder
 import Dialoger, time, skelet, lavaskelet, boss, maps
 
+# alla globala variabler
 place = 0
 horizont = None
 key1 = False
@@ -14,6 +16,7 @@ riddle_room = False
 death = False
 win = False
 
+# funktion för händelsen i olika rummen
 def event():
     global place
     global horizont
@@ -80,39 +83,12 @@ def event():
         Dialoger.lastleft()
         win = True
 
+# funktion för om man väljer att gå bakåt
 def back():
     print("Du går tillbaka till grottan bakom dig och är där nu\n")
     time.sleep(1)
-
-def deadend():
-    global place
-    global horizont
-    global key1
-    global key2
-    global item_room
-    global item
-    global wiseman_room
-    global enemy1_room
-    global enemy2_room
-    global riddle_room
-    global death
-    global win
-    deadend_option = None
-    Dialoger.kartaintruktion()
-    while deadend_option != "2":
-        
-        deadend_option = input("Du kan bara gå bak just nu!!! (Ange 2 för att gå bakåt):").lower()
     
-        if deadend_option == "2":
-           back()
-           place = place - 1
-        elif deadend_option == "k":
-            maps.map_guuide()
-        else:
-            print("Du kan bara skriva 2 eller k !!!\n")
-        
-
-
+# funktion för hela spelets movement och vart man kan gå beroende på vart man är med kartan som val
 def position():
     global place
     global horizont
@@ -414,15 +390,18 @@ def position():
                 place = place + 2
             else: 
                 print("Du kan bara skriva 1 eller 3 !!!\n")
+    # om man tar sista vänster
     elif place == 6:
         print("DU DOG\n")
-
+    # om man tar sista höger
     elif place == 7:
         print("DU VANN\n")
 
+# intro till spelet
 Dialoger.title()
 Dialoger.room1()
 
+# funktion för hur spelet kommer att loopas tills man dör eller vinner
 def stone_depth():
     global death
     global win

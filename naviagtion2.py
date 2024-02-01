@@ -1,3 +1,4 @@
+# globala variabler
 place = 0
 horizont = None
 key1 = False
@@ -12,6 +13,7 @@ riddle_room = False
 death = False
 win = False
 
+# funktion för det som händer i rummen
 def event():
     global place
     global horizont
@@ -69,7 +71,7 @@ def event():
         
 
 
-
+# funktion för vart man kan gå om man kan gå överallt
 def movement():
     global place
     global horizont
@@ -97,6 +99,7 @@ def movement():
         else:
             print("du kan bara skriva 0 - 1 - 3")
 
+# funktion för vart man går i början
 def start_movement():
     global place
     global horizont
@@ -119,7 +122,7 @@ def start_movement():
         horizont = "left"
         place = place + 1
 
-    
+# funktion för vart man går om man bara kan gå backåt
 def deadend():
     global place
     global horizont
@@ -142,6 +145,7 @@ def deadend():
         else:
             print("du kan bara skriva 3")
 
+# funktion för hela spelets movement och vart man kan gå beroende på vart man är
 def position():
     global place
     global horizont
@@ -339,6 +343,7 @@ def position():
     elif place == 7:
         print("du van")
 
+# loop för hur positionen och evented körs i en loop tills man vinner eller förlorar
 while win != True and death != True:
     position()
     event()

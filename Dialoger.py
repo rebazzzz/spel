@@ -68,7 +68,7 @@ def rightdoor1():
 #Deadend1
 def loreinfo():
   print ("""Du befinner dig i ett rum utan fler utvägar och hör ett ljud. 
-  "Nu när du har kommit in i Grottan, kan du inte lämna förrän du har tagit Stenjättens kärna. Många har inträtt i Grottan, men ingen har lyckats lämna. Det ögonblick du trädde in utlöste du Acinet cursen och är nu fast i en evig loop.    
+  "Nu när du har kommit in i Grottan, kan du inte lämna förrän du har tagit Stenjättens kärna. Många har inträtt i Grottan, men ingen har lyckats lämna. Det ögonblick du trädde in utlöste du ancient cursen och är nu fast i en evig loop.    
    Det kan vara din femte loop, men du har ingen aning. Inte ens döden kan bryta cursen. För att bryta denna förbannelse, bege dig nu mot målet och ta Stenjättens kärna. Tiden är knapp, och varje ögonblick räknas."
         """)
   time.sleep(2)
