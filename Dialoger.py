@@ -25,11 +25,15 @@ def title():
 
 #Room1
 
+def kartaintruktion():
+    print("*** Ange 'k' om du vill se var du befinner dig på kartan ***")
+
+
 def room1():
-  print ("Du stiger in i grottan och känner av den kalla luften forsa över.\n")
+  print ("Du vaknar in i grottan och känner av den kalla luften forsa över.\n")
   time.sleep(2)
 
-  print ("Vid gråttans slut finns de två vägar en öppen tunnel åt höger och en dörr åt vänster...\n")
+  print ("Vid grottans slut finns de två vägar en öppen tunnel åt höger och en dörr åt vänster...\n")
   time.sleep(2)
 
 def caveleft ():
@@ -62,17 +66,13 @@ def rightdoor1():
 
 
 #Deadend1
-def deadend1():
-  print ("Du är inne i ett rum med inga mer vägar men en kista är framför dig!\n")
+def loreinfo():
+  print ("""Du befinner dig i ett rum utan fler utvägar och hör ett ljud. 
+  "Nu när du har kommit in i Grottan, kan du inte lämna förrän du har tagit Stenjättens kärna. Många har inträtt i Grottan, men ingen har lyckats lämna. Det ögonblick du trädde in utlöste du Acinet cursen och är nu fast i en evig loop.    
+   Det kan vara din femte loop, men du har ingen aning. Inte ens döden kan bryta cursen. För att bryta denna förbannelse, bege dig nu mot målet och ta Stenjättens kärna. Tiden är knapp, och varje ögonblick räknas."
+        """)
   time.sleep(2)
 
-  val = int(input("Vill du öppna kistan eller inte? (skriv 1 för att öppna, 2 för att inte.):\n"))
-
-  if val == 1:
-     print ("Du öppnar kistan och hittar ingenting förutom stenar och kol.\n")
-
-  if val == 2:
-     print ("Du valde att inte öppna kistan, du kan komma tillbaka för att öppna den!\n")
 
 
 #Enemy room 1 
@@ -135,7 +135,7 @@ def enemyroom2():
  print ("Rummet känns varmare än förut och ljud av fallande stenar hörs...\n")
  time.sleep(2)
 
- print ("Något börjar komma fram från den mörka gråttan mot dig!\n")
+ print ("Något börjar komma fram från den mörka grottan mot dig!\n")
  time.sleep(2)
 
  print("""           )        )
@@ -166,7 +166,7 @@ def enemyroom2():
  print("Ett skelet kom fram!!!\n")
 
 def DeadEnemy2():
- print("Skeletet har dött och du går till slutet av gråttan.\n")
+ print("Skeletet har dött och du går till slutet av grottan.\n")
  time.sleep(2)
 
  print ("Framför dig finns två dörrar en åt höger och en åt vänster...\n")
@@ -186,7 +186,7 @@ def nyckelnvänster():
 
 #Rum med gåttan
 def riddle():
-  print("Rummet är upplyst av lysande crystaler runt om i gråttan.\n")
+  print("Rummet är upplyst av lysande crystaler runt om i grottan.\n")
   time.sleep(2)
 
   print("Du ser en liten staty av en drake i mitten av rummet...\n")
@@ -339,8 +339,8 @@ def lastright():
  print("Framför dig finns trappor uppåt och du går upp dem...")
  time.sleep(2)
 
- print("... vid slutet av trapporna öppnar du en dörr och kommer ut från gråttan!")
+ print("... vid slutet av trapporna öppnar du en dörr och kommer ut från grottan!")
  time.sleep(2)
 
- print("Grattis du överlevde gråttan!!!")
+ print("Grattis du överlevde grottan!!!")
  time.sleep(2)

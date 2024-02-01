@@ -13,21 +13,21 @@ arsenal = ["Pickaxe 🪓", "Yxa 🔨", "Magisktlubba 🍭✨"]
 def spelare_attack():
     """Spelaren attackerar enemy genom att välja vapen i sin arsenal"""
     global boss_hp 
-    attack = int(input("Skriv 1 för Pickaxe, 2 för yxan och 3 för den magiska klubban:\n"))
+    attack = input("Skriv 1 för Pickaxe, 2 för yxan och 3 för den magiska klubban:\n")
 
-    if attack == 1:
+    if attack == "1":
         boss_hp -= pickaxe
         if boss_hp <= 0:
             print(f"Bossen är död!")
         else:
             print(f"⚔️ 🗿 💥: Bossen har nu {boss_hp} hp efter din attack.")
-    elif attack == 2:
+    elif attack == "2":
         boss_hp -= yxa
         if boss_hp <= 0:
             print(f"Bossen är död:")
         else:
             print(f"⚔️ 🗿 💥💥: Bossen har nu {boss_hp} hp efter din attack.")
-    elif attack == 3:
+    elif attack == "3":
         boss_hp -= magisktlubba
         if boss_hp <= 0:
             print(f"Bossen är död!")
@@ -72,3 +72,4 @@ def boss_combatloop():
         if player_hp <= 0:
             print("GAME OVER")
             break
+

@@ -13,21 +13,21 @@ arsenal = ["Pickaxe 🪓", "Yxa 🔨", "Magisktlubba 🍭✨"]
 def spelare_attack():
     """Spelaren attackerar enemy genom att välja vapen i sin arsenal"""
     global lavaskelet_hp    
-    attack = int(input("Skriv 1 för Pickaxe, 2 för yxan och 3 för den magiska klubban:\n"))
+    attack = input("Skriv 1 för Pickaxe, 2 för yxan och 3 för den magiska klubban:\n")
 
-    if attack == 1:
+    if attack == "1":
         lavaskelet_hp -= pickaxe
         if lavaskelet_hp <= 0:
             print(f" Lava skelettet är död!")
         else:
             print(f"⚔️ 🦴🔥 💥: Lava skelettet har nu {lavaskelet_hp} hp efter din attack.")
-    elif attack == 2:
+    elif attack == "2":
         lavaskelet_hp -= yxa
         if lavaskelet_hp <= 0:
             print(f"Lava skelettet är död:")
         else:
             print(f"⚔️ 🦴🔥 💥💥: Lava skelettet har nu {lavaskelet_hp} hp efter din attack.")
-    elif attack == 3:
+    elif attack == "3":
         lavaskelet_hp -= magisktlubba
         if lavaskelet_hp <= 0:
             print(f"Lava skelettet är död!")
@@ -64,7 +64,7 @@ def lavaskelet_combatloop():
         spelare_attack()
         time.sleep(0.5)
         if lavaskelet_hp <= 0:
-            print("Raslande benen faller!!!")
+            print("Raslande benen faller!!!\n")
             break
 
         lavaskelet_attack()
@@ -72,3 +72,4 @@ def lavaskelet_combatloop():
         if player_hp <= 0:
             print("GAME OVER")
             break
+
